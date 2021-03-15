@@ -1,0 +1,46 @@
+<h2 i18n>TDK jelentkezés feltöltése</h2>
+<mat-divider></mat-divider>
+<br>
+<form #fileUploadForm>
+
+  <br>
+  <mat-form-field>
+    <mat-label i18n>TDK dolgozat címe</mat-label>
+    <mat-select name="selectedApplication" [(ngModel)]="selectedApplication">
+      <mat-option *ngFor="let userApplication of userApplications" [value]="userApplication">
+        {{userApplication.tdkTitle}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input name="applicationFile.tdkFile.fileName" matInput [(ngModel)]="applicationFile.tdkFile.fileName"
+      placeholder="A fájl neve" i18n-placeholder type="text" required minlength="1" #tdkFileFileNameModel="ngModel"
+      disabled />
+
+    <mat-error *ngIf="tdkFileFileNameModel.invalid && (tdkFileFileNameModel.dirty|| tdkFileFileNameModel.touched)" i18n>
+      A fájl nevét kötelező megadni</mat-error>
+
+  </mat-form-field>
+</form>
+<br>
+<ul>
+  <button (click)="fileInput.click()" mat-raised-button color="primary" i18n>Fájl kiválasztása</button>
+  <span
+    style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+    <input type="file" name="photo" ng2FileSelect #fileInput [uploader]="uploader" />
+  </span>
+
+  <button type="button" mat-raised-button color="primary" (click)="uploader.uploadAll()"
+    [disabled]="!uploader.getNotUploadedItems().length" i18n-matTooltip
+    matTooltip="A fájl feltöltése. A feltöltés után a mentés gombra kattintva mentődik el a fájl a TDK konferenciához. ">
+    <span i18n>
+      Fájl feltöltése</span>
+  </button>
+  <br>
+
+  <button mat-raised-button color="primary" (click)="fileUploadFunction()"
+    [disabled]="tdkFileFileNameModel.invalid||(this.applicationFile.tdkFile.fileName==undefined)||(this.applicationFile.tdkFile.fileName=='')"
+    i18n-matTooltip matTooltip="A feltöltött fájl mentése a TDK konferenciához "><span class="material-icons">
+      add
+    </span><span i18n>Mentés</span></button>

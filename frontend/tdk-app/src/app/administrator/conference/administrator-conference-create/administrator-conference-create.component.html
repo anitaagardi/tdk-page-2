@@ -1,0 +1,98 @@
+<span class="conference-create">
+  <h2>Konferencia létrehozása</h2>
+  <mat-divider></mat-divider>
+  <br>
+  <form #createConferenceForm>
+    <mat-form-field>
+      <input name="conference.nameName" matInput [(ngModel)]="conference.name" placeholder="Konferencia címe"
+        type="text" required minlength="1" #conferenceNameModel="ngModel" />
+      <mat-error *ngIf="conferenceNameModel.invalid && (conferenceNameModel.dirty|| conferenceNameModel.touched)">
+        A
+        konferencia címét kötelező megadni</mat-error>
+    </mat-form-field>
+
+
+    <mat-label>Jelentkezés kezdete</mat-label>
+    <input name="conference.beginDateName" matInput [matDatepicker]="pickerBeginDate" [(ngModel)]="conference.beginDate"
+      #conferenceBeginDateModel="ngModel">
+    <mat-datepicker-toggle matSuffix [for]="pickerBeginDate"></mat-datepicker-toggle>
+    <mat-datepicker #pickerBeginDate></mat-datepicker>
+    <mat-error
+      *ngIf="conferenceBeginDateModel.invalid && (conferenceBeginDateModel.dirty|| conferenceBeginDateModel.touched)">
+      A
+      konferencia jelentkezésének kezdetét kötelező megadni</mat-error>
+    <br>
+
+    <mat-label>Jelentkezés vége</mat-label>
+    <input name="conference.endDateName" matInput [matDatepicker]="pickerEndDate" [(ngModel)]="conference.endDate"
+      #conferenceEndDateModel="ngModel">
+    <mat-datepicker-toggle matSuffix [for]="pickerEndDate"></mat-datepicker-toggle>
+    <mat-datepicker #pickerEndDate></mat-datepicker>
+    <mat-error
+      *ngIf="conferenceEndDateModel.invalid && (conferenceEndDateModel.dirty|| conferenceEndDateModel.touched)">
+      A
+      konferencia jelentkezésének végét kötelező megadni</mat-error>
+    <br>
+    <mat-label>A TDK jelentkezéshez tartozó fájlok feltöltésének határideje (TDK dolgozat, jelentkezés, rezümé stb.)
+    </mat-label>
+    <input name="conference.fileUploadClosingDateName" matInput [matDatepicker]="pickerFileUploadClosingDate"
+      [(ngModel)]="conference.fileUploadClosingDate" #conferenceFileUploadClosingDateModel="ngModel">
+    <mat-datepicker-toggle matSuffix [for]="pickerFileUploadClosingDate"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFileUploadClosingDate></mat-datepicker>
+    <mat-error
+      *ngIf="conferenceFileUploadClosingDateModel.invalid && (conferenceFileUploadClosingDateModel.dirty|| conferenceFileUploadClosingDateModel.touched)">
+      A
+      TDK jelentkezéshez tartozó fájlok feltöltésének határidejét kötelező megadni</mat-error>
+    <br>
+    <mat-form-field>
+      <input name="conference.dataManagementPolicyName" matInput [(ngModel)]="conference.dataManagementPolicy"
+        placeholder="Adatkezelési szabályzat" type="text" #conferenceDataManagementPolicyModel="ngModel"
+        matTooltip="Nem kötelező adatkezelési szabályzatot konferenciához hozzáadni " />
+    </mat-form-field>
+    <mat-form-field>
+      <input name="conference.dataManagementPolicy_ENName" matInput [(ngModel)]="conference.dataManagementPolicy_EN"
+        placeholder="Adatkezelési szabályzat angol nyelven" type="text"
+        #conferenceDataManagementPolicy_ENModel="ngModel"
+        matTooltip="Nem kötelező adatkezelési szabályzatot konferenciához hozzáadni " />
+    </mat-form-field>
+  </form>
+  <form #createProjectForm>
+    <mat-form-field>
+      <input name="projectName" matInput [(ngModel)]="project" placeholder="Projekt szövege" type="text" required
+        minlength="1" #projectModel="ngModel"
+        matTooltip="Nem kötelező projektet hozzáadni a konferenciához, de akár többet is hozzáadhat" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addProject()" [disabled]="projectModel.invalid"
+      matTooltip="Nem kötelező projektet hozzáadni a konferenciához, de akár többet is hozzáadhat"><span
+        class="material-icons">
+        add
+      </span>Projekt hozzádása</button>
+  </form>
+  <br>
+  <ng-container *ngIf="createdProjects.length>0">
+    <table mat-table [dataSource]="createdProjectsSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="project">
+        <th mat-header-cell *matHeaderCellDef>Név</th>
+        <td mat-cell *matCellDef="let project">{{project}} </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Projekt törlése</th>
+        <td mat-cell *matCellDef="let project">
+          <button mat-raised-button color="primary" (click)="removeProject(project)"><span class="material-icons">
+              delete
+            </span>Project törlése</button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsAuthors"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsAuthors;"></tr>
+    </table>
+  </ng-container>
+  <br>
+  <button mat-raised-button color="primary" (click)="addConference()"
+    [disabled]="(conferenceNameModel.invalid
+    ||conferenceBeginDateModel.invalid||conferenceEndDateModel.invalid)||(conference.beginDate>=conference.endDate)||(conference.beginDate>=conference.fileUploadClosingDate)||(conference.endDate>=conference.fileUploadClosingDate)"><span
+      class="material-icons">
+      add
+    </span>Létrehozás</button>
+
+</span>

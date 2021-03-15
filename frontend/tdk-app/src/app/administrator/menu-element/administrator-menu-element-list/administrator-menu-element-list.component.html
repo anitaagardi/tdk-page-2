@@ -1,0 +1,39 @@
+<h2>Létrehozott menü elemek</h2>
+<mat-divider></mat-divider>
+<br>
+<mat-form-field>
+  <mat-label><span class="material-icons">
+      search
+    </span>Keresés</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Keresés">
+</mat-form-field>
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> Cím </th>
+    <td mat-cell *matCellDef="let menuElement">
+      {{menuElement.title}}
+    </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="operations">
+    <th mat-header-cell *matHeaderCellDef> Törlés </th>
+    <td mat-cell *matCellDef="let menuElement">
+      <button mat-raised-button color="basic" (click)="deleteMenuElement(menuElement)" class="expansion-button"><span
+          class="material-icons">
+          delete
+        </span>Törlés</button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->

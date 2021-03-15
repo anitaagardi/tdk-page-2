@@ -1,0 +1,31 @@
+<h2>Fájl felöltése</h2>
+<mat-divider></mat-divider>
+<br>
+<form #fileUploadForm>
+  <mat-form-field>
+    <input name="tdkFile.fileNameName" matInput [(ngModel)]="tdkFile.fileName" placeholder="A fájl neve" type="text"
+      required minlength="1" #tdkFileFileNameModel="ngModel" disabled />
+
+    <mat-error *ngIf="tdkFileFileNameModel.invalid && (tdkFileFileNameModel.dirty|| tdkFileFileNameModel.touched)">
+      A fájl nevét kötelező megadni</mat-error>
+
+  </mat-form-field>
+  <br>
+  <button (click)="fileInput.click()" mat-raised-button color="primary">Fájl kiválasztása</button>
+  <span
+    style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+    <input type="file" name="photo" ng2FileSelect #fileInput [uploader]="uploader" />
+  </span>
+
+  <button type="button" mat-raised-button color="primary" (click)="uploader.uploadAll()"
+    [disabled]="!uploader.getNotUploadedItems().length"
+    matTooltip="A gombra kattintással feltöltjük a fájlt, de a fájl névhez rendeléshez a mentés gombra is kell utánna kattintatni ">
+    Fájl feltöltése
+  </button>
+  <br>
+  <button mat-raised-button color="primary" (click)="fileUploadFunction()"
+    [disabled]="tdkFileFileNameModel.invalid||(tdkFile.fileName==undefined)"
+    matTooltip="A feltöltött fájlt fájlnévhez rendeli"><span class="material-icons">
+      add
+    </span>Mentés</button>
+</form>

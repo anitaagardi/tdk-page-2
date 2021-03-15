@@ -1,0 +1,45 @@
+<h2> Új képzés létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #createSpecializationForm>
+  <mat-form-field>
+    <mat-label>Kar neve</mat-label>
+    <mat-select name="selectedFacultyName" [(ngModel)]="selectedFaculty">
+      <mat-option *ngFor="let faculty of faculties" [value]="faculty">
+        {{faculty.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Képzés típusa</mat-label>
+    <mat-select name="selectedTypeOfSpecializationName" [(ngModel)]="selectedTypeOfSpecialization">
+      <mat-option *ngFor="let typeOfSpecialization of typeOfSpecializations" [value]="typeOfSpecialization">
+        {{typeOfSpecialization.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input name="specialization.nameName" matInput [(ngModel)]="specialization.name" placeholder="Szak elnevezése"
+      type="text" required minlength="1" #specializationNameModel="ngModel" />
+    <mat-error
+      *ngIf="specializationNameModel.invalid && (specializationNameModel.dirty|| specializationNameModel.touched)">A
+      szak
+      elnevezését
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input name="specialization.name_ENName" matInput [(ngModel)]="specialization.name_EN"
+      placeholder="Szak elnevezése (angol)" type="text" required minlength="1" #specializationName_ENModel="ngModel" />
+    <mat-error
+      *ngIf="specializationName_ENModel.invalid && (specializationName_ENModel.dirty|| specializationName_ENModel.touched)">
+      A szak
+      elnevezését angolul
+      kötelező megadni</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addSpecialization()" [disabled]="(specializationNameModel.invalid
+    ||specializationName_ENModel.invalid)"><span class="material-icons">
+      add
+    </span>Mentés</button>
+</form>

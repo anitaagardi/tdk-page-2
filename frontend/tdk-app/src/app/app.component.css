@@ -1,0 +1,62 @@
+/*a:link, a:visited { 
+  background-color: #848686; 
+  color: white; 
+  padding: 10px 25px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+} 
+a:hover, a:active {
+  background-color: #BD9696;
+}*/
+.page-container {
+  width: 100%;
+  height: 100%;
+  /*margin: 10px;
+  border: 1px solid #555;*/
+}
+
+.page-nav {
+  width: 20%;
+  /*backgroud-color:rgb(237,237,211);*/
+  background-color: rgb(240, 240, 240);
+}
+
+.page-content {
+  /*background-color:rgb(247, 247, 232);*/
+}
+
+h1 {
+  text-align: center;
+}
+
+/*body{
+  margin:100px;
+  padding:100px;
+  align-items: center;
+}*/
+.facultyImg {
+  width: "50px" !important;
+  height: "50px" !important;
+  margin: "50px" !important;
+}
+
+:host {
+  display: block;
+  height: 100%;
+  /* margin-left: 10%;
+  margin-right: 10%;*/
+  width: 100%;
+}
+
+.tdkImg {
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+
+}
+
+.tdkImgDiv {
+  background-color: rgb(240, 240, 240);
+}

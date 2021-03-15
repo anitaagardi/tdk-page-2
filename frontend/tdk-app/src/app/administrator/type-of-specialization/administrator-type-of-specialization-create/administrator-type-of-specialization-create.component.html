@@ -1,0 +1,31 @@
+<h2> Új képzési típus létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #createTypeOfSpecializationForm>
+  <mat-form-field>
+    <input name="typeOfSpecialization.nameName" matInput [(ngModel)]="typeOfSpecialization.name"
+      placeholder="A képzés típusának elnevezése" type="text" required minlength="1"
+      #typeOfSpecializationNameModel="ngModel" />
+    <mat-error
+      *ngIf="typeOfSpecializationNameModel.invalid && (typeOfSpecializationNameModel.dirty|| typeOfSpecializationNameModel.touched)">
+      A képzés típusának
+      elnevezését
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input name="typeOfSpecialization.name_ENName" matInput [(ngModel)]="typeOfSpecialization.name_EN"
+      placeholder="A képzés típusának elnevezése (angol)" type="text" required minlength="1"
+      #typeOfSpecializationName_ENModel="ngModel" />
+    <mat-error
+      *ngIf="typeOfSpecializationName_ENModel.invalid && (typeOfSpecializationName_ENModel.dirty|| typeOfSpecializationName_ENModel.touched)">
+      A képzés típusának
+      elnevezését angolul
+      kötelező megadni</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addTypeOfSpecialization()" [disabled]="(typeOfSpecializationNameModel.invalid
+    ||typeOfSpecializationName_ENModel.invalid)"><span class="material-icons">
+      add
+    </span>Mentés</button>
+</form>

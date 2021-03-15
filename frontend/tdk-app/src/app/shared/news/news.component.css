@@ -1,0 +1,20 @@
+.menuTitle {
+  font-size: medium;
+  font-weight: bold;
+  /*color: black;*/
+  color: rgb(19, 63, 100);
+}
+
+.menuDate {
+  float: right;
+  font-size: small;
+  /*color: #ff6666;*/
+  color: rgb(99, 140, 173);
+  font-weight: bold;
+}
+
+.menuContent {
+  clear: both;
+  font-size: small;
+  color: rgb(19, 63, 100);
+}

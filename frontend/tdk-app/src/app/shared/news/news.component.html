@@ -1,0 +1,10 @@
+<h2>{{menu?.name}}</h2>
+<ul class="style1">
+
+  <li *ngFor="let menuElement of menu?.menuElements.reverse()">
+    <p class="menuTitle">{{menuElement?.title}}</p>
+    <p class="menuDate">{{menuElement?.date | datePipe}}</p>
+    <p [innerHTML]="menuElement?.content" class="menuContent">
+    </p>
+  </li>
+</ul>

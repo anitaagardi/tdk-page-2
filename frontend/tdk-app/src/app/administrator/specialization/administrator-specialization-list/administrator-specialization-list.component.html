@@ -1,0 +1,117 @@
+<h2>Létrehozott szakok</h2>
+<mat-divider></mat-divider>
+<br>
+<mat-form-field>
+  <mat-label><span class="material-icons">
+      search
+    </span>Keresés</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Keresés">
+</mat-form-field>
+<mat-divider></mat-divider>
+<br>
+<div class="example-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name" sticky>
+      <th mat-header-cell *matHeaderCellDef> Név </th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.specialization.name" placeholder="Képzés neve"
+            #specializationNameModel="ngModel"></textarea>
+          <mat-error
+            *ngIf="specializationNameModel.invalid && (specializationNameModel.dirty|| specializationNameModel.touched)">
+            A
+            képzés nevét kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="name_EN">
+      <th mat-header-cell *matHeaderCellDef> Név angolul</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.specialization.name_EN" placeholder="Képzés neve (angolul)"
+            #specializationName_ENModel="ngModel"></textarea>
+          <mat-error
+            *ngIf="specializationName_ENModel.invalid && (specializationName_ENModel.dirty|| specializationName_ENModel.touched)">
+            A
+            képzés nevét (angolul) kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="faculty">
+      <th mat-header-cell *matHeaderCellDef> Kar</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.facultyName" disabled #facultyNameModel="ngModel"></textarea>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="faculty_EN">
+      <th mat-header-cell *matHeaderCellDef> Kar (angolul)</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.facultyName_EN" disabled #facultyName_ENModel="ngModel"></textarea>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="typeOfSpecialization">
+      <th mat-header-cell *matHeaderCellDef> Képzés típusa</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.typeOfSpecializationName" disabled
+            #typeOfSpecializationNameModel="ngModel"></textarea>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="typeOfSpecialization_EN">
+      <th mat-header-cell *matHeaderCellDef> Képzés típusa (angolul)</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="specializationListComponent.typeOfSpecializationName_EN" disabled
+            #typeOfSpecializationName_ENModel="ngModel"></textarea>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="modify">
+      <th mat-header-cell *matHeaderCellDef> Módosítás</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+        <button mat-raised-button color="basic"
+          (click)="modifySpecialization(specializationListComponent.specialization)" class="expansion-button"><span
+            class="material-icons">
+            settings
+          </span>Módosítás</button> <br>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Törlés</th>
+      <td mat-cell *matCellDef="let specializationListComponent">
+        <button mat-raised-button color="basic"
+          (click)="deleteSpecialization(specializationListComponent.specialization)" class="expansion-button"><span
+            class="material-icons">
+            delete
+          </span>Törlés</button> <br>
+      </td>
+    </ng-container>
+
+
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+<!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->

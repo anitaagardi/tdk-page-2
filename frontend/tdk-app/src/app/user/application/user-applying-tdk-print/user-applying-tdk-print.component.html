@@ -1,0 +1,158 @@
+<br>
+
+<button mat-raised-button color="primary" printSectionId="pdfTable" ngxPrint
+  [printStyle]="{table: {'border': '1px solid black','border-collapse': 'collapse','width':'100%','text-align':'center'},td:{'border': '1px solid black'},th:{'border': '1px solid black'},div:{'text-align':'justify'},h1:{'text-align':'center'},h3:{'text-align':'center'}}"><span
+    class="material-icons">
+    cloud_download
+  </span><span i18n>Nyomtatás</span></button>
+
+
+<div id="pdfTable" #pdfTable>
+
+  <h1 i18n>Adatlap</h1>
+  <h3><span i18n>A Miskolci Egyetem </span> {{conference?.name}} <span i18n>TDK konferenciáján előadást tartók
+      számára</span></h3>
+  <table>
+    <tr>
+      <th i18n>Szerző(k) neve</th>
+      <th i18n>Kar</th>
+      <th i18n>Szak</th>
+      <th i18n>Aktív félévek száma</th>
+      <th i18n>Várhatóan a TDK konferencia félévében tanulmányait befejezi-e</th>
+    </tr>
+    <tr *ngFor="let author of application?.authors">
+      <td>{{author?.name}}</td>
+      <td>{{author?.facultyName}}</td>
+      <td>{{author?.specialization}}</td>
+      <td>{{author?.year}}</td>
+      <td>{{author?.isGraduate}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th i18n>A pályamunka címe</th>
+    </tr>
+    <tr>
+      <td>{{application?.tdkTitle}}</td>
+    </tr>
+    <tr>
+      <th i18n>A pályamunka címe (angolul)</th>
+    </tr>
+    <tr>
+      <td>{{application?.tdkTitle_EN}}</td>
+    </tr>
+    <tr>
+      <th i18n>A pályamunka nyelve</th>
+    </tr>
+    <tr>
+      <td>{{application?.language}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th i18n>Kar neve</th>
+      <th i18n>Kari szekció neve</th>
+    </tr>
+    <tr>
+      <td>{{application?.facultyName}}</td>
+      <td>{{application?.facultySectionName}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th i18n>Témavezető(k) neve</th>
+      <th i18n>Beosztása</th>
+      <th i18n>Kar</th>
+      <th i18n>Intézet</th>
+    </tr>
+    <tr *ngFor="let supervisor of application?.supervisors">
+      <td>{{supervisor?.name}}</td>
+      <td>{{supervisor?.position}}</td>
+      <td>{{supervisor?.faculty}}</td>
+      <td>{{supervisor?.institute}}</td>
+    </tr>
+  </table>
+  <table *ngFor="let author of application?.authors">
+    <tr>
+      <th i18n>Szerző(k) adatai </th>
+      <th></th>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Név</td>
+      <td>{{author?.name}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Neptun kód</td>
+      <td>{{author?.neptunCode}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Személyi igazolvány szám</td>
+      <td>{{author?.idNumber}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Adózási státusza</td>
+      <td>{{author?.taxStatus}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Dolgozó</td>
+      <td>{{author?.isEmployee}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Adóazonosító jel
+      </td>
+      <td>{{author?.taxIdentificationNumber}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Születési hely, idő
+      </td>
+      <td>{{author?.birthPlace}} {{author?.birthDate | datePipe}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Anyja neve</td>
+      <td>{{author?.nameOfTheMother}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Állandó lakcím / Tartózkodási hely</td>
+      <td>{{author?.zipCode}} {{author?.town}} {{author?.streetAndNumber}}</td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Elérhetőség</td>
+      <td><span i18n>Mobil:</span> {{author?.telephoneNumber}} <span i18n>Email:</span> {{author?.email}}
+      </td>
+    </tr>
+    <tr>
+      <td class="thClass" i18n>Bankszámlaszám</td>
+      <td>{{author?.bankAccountNumber}}</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+
+  <div *ngFor="let projectItem of application?.projects">
+    <div>{{projectItem}}</div>
+  </div>
+  <br>
+  <div>{{localeDataManagementPolicy}}</div>
+  <br>
+  <br>
+  <div>{{application?.summary}}</div>
+  <br>
+  <div><span i18n> A fentiekben részletezett adatok és a mellékelt 1 oldalas tartalmi
+      összefoglaló alapján kérem az ME</span>
+    {{conference?.name}} <span i18n>TDK konferencián a pályamunka bemutatásának
+      elfogadását</span></div>
+  <br>
+  <div i18n> A közölt adatok a valóságnak megfelelnek</div>
+  <br>
+  <div>Miskolc, 20____________________</div>
+  <br>
+  <br>
+  <div class="centeredClass">
+    __________________________________________________________________________________________________</div>
+  <div class="centeredClass" i18n> Konzulens(ek) aláírása</div>
+  <br>
+  <br>
+  <div class="centeredClass">
+    __________________________________________________________________________________________________</div>
+  <div class="centeredClass" i18n> Szerző(k) aláírása</div>
+</div>

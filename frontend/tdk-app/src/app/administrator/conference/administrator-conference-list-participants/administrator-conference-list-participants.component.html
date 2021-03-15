@@ -1,0 +1,672 @@
+<h2>A konferencián résztvevők listája</h2>
+<mat-divider></mat-divider>
+<br>
+<button mat-raised-button color="basic" (click)="writeExcel()" class="singleButton"
+  matTooltip="A kijelölt jelentkezések adatát excel fájlba teszi"><span class="material-icons">
+    cloud_download
+  </span>Excel fájl letöltése</button>
+
+<button mat-raised-button color="basic" (click)="sendEmailToReviewer()" class="singleButton"
+  matTooltip="Csak a kijelölt jelentkezéseknek küld emailt"><span class="material-icons">
+    alternate_email
+  </span>Email küldése a bírálóknak</button>
+<br>
+<mat-divider></mat-divider>
+<table #excelTable style="display:none">
+  <tr>
+    <td>Jelentkezés státusza</td>
+    <td>TDK cím</td>
+    <td>TDK cím (angolul)</td>
+    <td>TDK szekció neve</td>
+    <td>Kar neve</td>
+    <td>Különleges eszközök a konferenciára</td>
+    <td>Témavezető neve</td>
+    <td>Témavezető beosztása</td>
+    <td>Kar</td>
+    <td>Intézet</td>
+    <td>Szerző(k) neve</td>
+    <td>Kar</td>
+    <td>Szak</td>
+    <td>Aktív félévek száma</td>
+    <td>Várhatóan ebben a félévben végez-e</td>
+    <td>Neptun kód</td>
+    <td>Személyi igazolvány szám</td>
+    <td>Képzés típusa</td>
+    <td>Adózási státusza</td>
+    <td>Dolgozó</td>
+    <td>Adószám</td>
+    <td>Születési hely</td>
+    <td>Születési idő</td>
+    <td>Anyja neve</td>
+    <td>Irányítószám</td>
+    <td>Város</td>
+    <td>Utca, házszám</td>
+    <td>Telefonszám</td>
+    <td>Email</td>
+    <td>Bankszámlaszám</td>
+    <td>TDK dolgozat kivonata</td>
+    <td>TDK dolgozat nyelve</td>
+    <td>Projektek</td>
+    <td>Bíráló neve</td>
+    <td>Bíráló email címe</td>
+    <td>Bíráló munkahelye</td>
+  </tr>
+  <tr *ngFor="let excelApplication of excelApplications">
+    <td>{{excelApplication.status}}</td>
+    <td>{{excelApplication.tdkTitle}}</td>
+    <td>{{excelApplication.tdkTitle_EN}}</td>
+    <td>{{excelApplication.facultySectionName}}</td>
+    <td>{{ excelApplication.facultyName}}</td>
+    <td>{{excelApplication.equipments}}</td>
+    <td>{{excelApplication.supervisorName}}</td>
+    <td>{{excelApplication.supervisorPosition}}</td>
+    <td>{{excelApplication.supervisorFaculty}}</td>
+    <td>{{excelApplication.supervisorInstitute}}</td>
+    <td>{{excelApplication.authorName}}</td>
+    <td>{{excelApplication.authorFacultyName}}</td>
+    <td>{{excelApplication.authorSpecialization}}</td>
+    <td>{{excelApplication.authorYear}}</td>
+    <td><span *ngIf="excelApplication.authorIsGraduate">Végzős</span><span
+        *ngIf="!excelApplication.authorIsGraduate">Nem végzős</span></td>
+    <td>{{excelApplication.authorNeptunCode}}</td>
+    <td>{{excelApplication.authorIdNumber}}</td>
+    <td>{{excelApplication.authorTypeOfTheSpecialization}}</td>
+    <td>{{excelApplication.authorTaxStatus}}</td>
+    <td>{{excelApplication.authorIsEmployee}}</td>
+    <td>{{excelApplication.authorTaxIdentificationNumber}}</td>
+    <td>{{excelApplication.authorBirthPlace}}</td>
+    <td>{{excelApplication.authorBirthDate}}</td>
+    <td>{{excelApplication.authorNameOfTheMother}}</td>
+    <td>{{excelApplication.authorZipCode}}</td>
+    <td>{{excelApplication.authorTown}}</td>
+    <td>{{excelApplication.authorStreetAndNumber}}</td>
+    <td>{{excelApplication.authorTelephoneNumber}}</td>
+    <td>{{excelApplication.authorEmail}}</td>
+    <td>{{excelApplication.authorBankAccountNumber}}</td>
+    <td>{{excelApplication.language}}</td>
+    <td>{{excelApplication.summary}}</td>
+    <td>{{excelApplication.projects}}</td>
+    <td>{{excelApplication.reviewerName}}</td>
+    <td>{{excelApplication.reviewerEmail}}</td>
+    <td>{{excelApplication.reviewerWorkplace}}</td>
+
+  </tr>
+</table>
+<br>
+
+<mat-form-field>
+  <mat-label><span class="material-icons">
+      search
+    </span>Keresés</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Keresés">
+</mat-form-field>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div class="example-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let listComponent"> {{listComponent.position}} </td>
+    </ng-container>
+    <ng-container matColumnDef="tdkTitle" sticky>
+      <th mat-header-cell *matHeaderCellDef> Pályamunka címe </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="listComponent.application.tdkTitle" placeholder="TDK pályamunka címe"
+            #applicationTDKTitleModel="ngModel"></textarea>
+          <mat-error
+            *ngIf="applicationTDKTitleModel.invalid && (applicationTDKTitleModel.dirty|| applicationTDKTitleModel.touched)">
+            A
+            TDK pályamunka címét kötelező megadni
+            kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="operations">
+      <th mat-header-cell *matHeaderCellDef> Műveletek </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Jelentkezés művelet
+              </mat-panel-title>
+              <mat-panel-description>
+
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <button mat-raised-button color="basic" (click)="setStatus(listComponent.application,'ACCEPTED')"
+              class="expansion-button">Jóváhagyás</button> <br>
+            <button mat-raised-button color="basic" (click)="setStatus(listComponent.application,'REJECTED')"
+              class="expansion-button">Elutasítás</button>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="reviewers">
+      <th mat-header-cell *matHeaderCellDef> Bíráló(k) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <button mat-raised-button color="basic" (click)="addReviewerDialog(listComponent.application)"
+          class="expansion-button"
+          matTooltip="Adjon bírálót a jelentkezésekhez, majd a kijelölés után küldje el a jelentkezés adatait bírálatra emailben">Bíráló
+          felvitele</button>
+        <span *ngFor="let reviewer of listComponent.application.reviewers; index as i">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Bíráló adatai
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{reviewer.name}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Neve: {{reviewer.name}}</p>
+              <p> E-mail címe: {{reviewer.email}}</p>
+              <p> Munkahelye: {{reviewer.workplace}}</p>
+              <button mat-raised-button color="basic" (click)="deleteReviewer(reviewer,listComponent.application)"
+                class="expansion-button">Bíráló
+                törlése</button> <br>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="isEmailSentToReviewer">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <div *ngIf="listComponent.application.isEmailSentToReviewer">Kiküldve</div>
+        <div *ngIf="!listComponent.application.isEmailSentToReviewer">Nincs kiküldve</div>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Jelentkezés törlése</th>
+      <td mat-cell *matCellDef="let listComponent"> <button mat-raised-button color="basic"
+          (click)="deleteApplication(listComponent.application)" class="expansion-button">Jelentkezés
+          törlése</button> </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Státusz</th>
+      <td mat-cell *matCellDef="let listComponent">{{listComponent.application.status}} </td>
+    </ng-container>
+    <ng-container matColumnDef="modification">
+      <th mat-header-cell *matHeaderCellDef> Jelentkezés módosítása</th>
+      <td mat-cell *matCellDef="let listComponent"><button mat-raised-button color="basic"
+          (click)="modifyApplication(listComponent.application)" class="expansion-button"
+          matTooltip="A jelentkezés módosítása akkor lesz sikeres, ha erre a módosítás gombra is kattint">Jelentkezés
+          módosítása</button> </td>
+    </ng-container>
+    <ng-container matColumnDef="printApplication">
+      <th mat-header-cell *matHeaderCellDef> Jelentkezés nyomtatása </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <button mat-raised-button color="basic" (click)="generatePDF(listComponent.application)">Nyomtatás</button>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="tdkTitle_EN">
+      <th mat-header-cell *matHeaderCellDef> Pályamunka címe (angolul) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            [(ngModel)]="listComponent.application.tdkTitle_EN" placeholder="TDK pályamunka címe (angolul)"
+            #applicationTDKTitle_ENModel="ngModel"></textarea>
+          <mat-error
+            *ngIf="applicationTDKTitle_ENModel.invalid && (applicationTDKTitle_ENModel.dirty|| applicationTDKTitle_ENModel.touched)">
+            A
+            TDK pályamunka angol címét kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="facultySectionName">
+      <th mat-header-cell *matHeaderCellDef> Kari szekció </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <input matInput [(ngModel)]="listComponent.application.facultySectionName"
+            placeholder="Kari szekció elnevezése" type="text" required minlength="1"
+            #applicationFacultySectionNameModel="ngModel" />
+          <mat-error
+            *ngIf="applicationFacultySectionNameModel.invalid && (applicationFacultySectionNameModel.dirty|| applicationFacultySectionNameModel.touched)">
+            A
+            kari szekciót
+            kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="facultyName">
+      <th mat-header-cell *matHeaderCellDef> Kar </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <input matInput [(ngModel)]="listComponent.application.facultyName" placeholder="Kar elnevezése" type="text"
+            required minlength="1" #applicationFacultyNameModel="ngModel" />
+          <mat-error
+            *ngIf="applicationFacultyNameModel.invalid && (applicationFacultyNameModel.dirty|| applicationFacultyNameModel.touched)">
+            A kar
+            elnevezését
+            kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="equipments">
+      <th mat-header-cell *matHeaderCellDef> Különleges technikai eszközök az előadás megtartásához </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <input matInput [(ngModel)]="listComponent.application.equipments" placeholder="Különleges technikai eszközök"
+            type="text" required minlength="1" #applicationEquipmentsModel="ngModel" />
+          <mat-error
+            *ngIf="applicationEquipmentsModel.invalid && (applicationEquipmentsModel.dirty|| applicationEquipmentsModel.touched)">
+            A különleges technikai eszközök
+            elnevezését
+            kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="language">
+      <th mat-header-cell *matHeaderCellDef> TDK dolgozat nyelve </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <mat-form-field>
+          <input matInput [(ngModel)]="listComponent.application.language" placeholder="TDK dolgozat nyelve" type="text"
+            required minlength="1" #applicationLanguageModel="ngModel" />
+          <mat-error
+            *ngIf="applicationLanguageModel.invalid && (applicationLanguageModel.dirty|| applicationLanguageModel.touched)">
+            A TDK dolgozat nyelvét
+            kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="summary">
+      <th mat-header-cell *matHeaderCellDef> TDK dolgozat kivonata </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <button mat-raised-button color="basic" (click)="summaryDialog(listComponent.application.summary)"
+          class="expansion-button">Kivonat</button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="supervisors">
+      <th mat-header-cell *matHeaderCellDef> Témavezető(k) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <span *ngFor="let supervisor of listComponent.application.supervisors; index as i">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Témavezető adatai
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{supervisor.name}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Neve:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.supervisors[i].name" placeholder="Neve"
+                    type="text" required minlength="1" #supervisorNameModel="ngModel" />
+                  <mat-error
+                    *ngIf="supervisorNameModel.invalid && (supervisorNameModel.dirty|| supervisorNameModel.touched)">A
+                    témavezető nevét
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p> Beosztása:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.supervisors[i].position"
+                    placeholder="Beosztása" type="text" required minlength="1" #supervisorPositionModel="ngModel" />
+                  <mat-error
+                    *ngIf="supervisorPositionModel.invalid && (supervisorPositionModel.dirty|| supervisorPositionModel.touched)">
+                    A témavezető beosztását
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p> Munkahelye:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.supervisors[i].faculty"
+                    placeholder="Kar elnevezése" type="text" required minlength="1" #supervisorFacultyModel="ngModel" />
+                  <mat-error
+                    *ngIf="supervisorFacultyModel.invalid && (supervisorFacultyModel.dirty|| supervisorFacultyModel.touched)">
+                    A kar
+                    elnevezését
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.supervisors[i].institute"
+                    placeholder="Intézet elnevezése" type="text" required minlength="1"
+                    #supervisorInstituteModel="ngModel" />
+                  <mat-error
+                    *ngIf="supervisorInstituteModel.invalid && (supervisorInstituteModel.dirty|| supervisorInstituteModel.touched)">
+                    Az intézet
+                    elnevezését
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef> Szerző(k) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <span *ngFor="let author of listComponent.application.authors; index as i">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Szerző adatai
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{author.name}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Neve:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.authors[i].name" placeholder="Szerző neve"
+                    type="text" required minlength="1" #authorNameModel="ngModel" />
+                  <mat-error *ngIf="authorNameModel.invalid && (authorNameModel.dirty|| authorNameModel.touched)">A
+                    szerző
+                    nevét
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p> Kar:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.authors[i].facultyName"
+                    placeholder="Kar elnevezése" type="text" required minlength="1" #authorFacultyNameModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorFacultyNameModel.invalid && (authorFacultyNameModel.dirty|| authorFacultyNameModel.touched)">
+                    A kar
+                    elnevezését
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Szak:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.authors[i].specialization"
+                    placeholder="Szak elnevezése" type="text" required minlength="1"
+                    #authorSpecializationModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorSpecializationModel.invalid && (authorSpecializationModel.dirty|| authorSpecializationModel.touched)">
+                    A szak
+                    elnevezését
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Aktív félévek száma:
+                <mat-form-field>
+                  <input name="author.yearName" matInput [(ngModel)]="listComponent.application.authors[i].year"
+                    placeholder="Aktív félévek száma" type="number" required minlength="1" #authorYearModel="ngModel"
+                    min="1" />
+
+                  <mat-error *ngIf="authorYearModel.invalid && (authorYearModel.dirty|| authorYearModel.touched)">Az
+                    aktív félévek számát
+                    kötelező megadni</mat-error>
+
+                </mat-form-field>
+              </p>
+              <p>Várhatóan ebben a félévben végez:
+                <mat-form-field>
+                  <input name="author.isGraduateName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].isGraduate"
+                    placeholder="Várhatóan ebben a félévben végez" type="text" #authorIsGraduateModel="ngModel" />
+
+                  <mat-error
+                    *ngIf="authorIsGraduateModel.invalid && (authorIsGraduateModel.dirty|| authorIsGraduateModel.touched)">
+                    Azt, hogy várhatóan ebben a félévben végez-e kötelező megadni</mat-error>
+
+                </mat-form-field>
+              </p>
+              <p>Neptun kód:
+                <mat-form-field>
+                  <input name="author.neptunCodeName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].neptunCode" placeholder="Neptun kód" type="text"
+                    required minlength="1" #authorNeptunCodeModel="ngModel" />
+
+                  <mat-error
+                    *ngIf="authorNeptunCodeModel.invalid && (authorNeptunCodeModel.dirty|| authorNeptunCodeModel.touched)">
+                    A
+                    neptun kódot kötelező megadni</mat-error>
+
+                </mat-form-field>
+              </p>
+              <p>Személyi
+                igazolvány
+                szám: <mat-form-field>
+                  <input name="author.idNumberName" matInput [(ngModel)]="listComponent.application.authors[i].idNumber"
+                    placeholder="Személyi igazolvány szám" type="text" required minlength="1"
+                    #authorIdNumberModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorIdNumberModel.invalid && (authorIdNumberModel.dirty|| authorIdNumberModel.touched)">A
+                    személyi igazolvány számot kötelező megadni
+                  </mat-error>
+                </mat-form-field>
+              </p>
+              <p>Képzés típusa:
+                <mat-form-field>
+                  <input name="author.typeOfTheSpecializationName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].typeOfTheSpecialization"
+                    placeholder="Képzés típusa" type="text" required minlength="1"
+                    #authorTypeOfTheSpecializationModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorTypeOfTheSpecializationModel.invalid && (authorTypeOfTheSpecializationModel.dirty|| authorTypeOfTheSpecializationModel.touched)">
+                    A
+                    képzés típusát kötelező megadni
+                  </mat-error>
+                </mat-form-field>
+              </p>
+              <p>Adózási
+                státusza:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.authors[i].taxStatus"
+                    placeholder="Adózási státusz" type="text" required minlength="1" #authorTaxStatusModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorTaxStatusModel.invalid && (authorTaxStatusModel.dirty|| authorTaxStatusModel.touched)">
+                    Az
+                    adózási státuszt
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Dolgozó:
+                <mat-form-field>
+                  <input matInput [(ngModel)]="listComponent.application.authors[i].isEmployee" placeholder="Dolgozó"
+                    type="text" required minlength="1" #authorIsEmployeeModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorIsEmployeeModel.invalid && (authorIsEmployeeModel.dirty|| authorIsEmployeeModel.touched)">
+                    A dolgozó mezőt
+                    kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Adóazonosító jel:<mat-form-field>
+                  <input name="author.taxIdentificationNumberName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].taxIdentificationNumber"
+                    placeholder="Adóazonosító jel" type="text" required minlength="1"
+                    #authorTaxIdentificationNumberModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorTaxIdentificationNumberModel.invalid && (authorTaxIdentificationNumberModel.dirty|| authorTaxIdentificationNumberModel.touched)">
+                    Az adóazonosító jelet kötelező megadni
+                  </mat-error>
+                </mat-form-field>
+              </p>
+              <p>Születési
+                hely:<mat-form-field>
+                  <input name="author.birthPlaceName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].birthPlace" placeholder="Születési hely"
+                    type="text" required minlength="1" #authorBirthPlaceModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorBirthPlaceModel.invalid && (authorBirthPlaceModel.dirty|| authorBirthPlaceModel.touched)">
+                    A
+                    születési helyet kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Születési idő:<input name="author.birthDateName" matInput [matDatepicker]="pickerAuthorBirthDate"
+                  [(ngModel)]="listComponent.application.authors[i].birthDate" #authorBirthDateModel="ngModel">
+                <mat-datepicker-toggle matSuffix [for]="pickerAuthorBirthDate"></mat-datepicker-toggle>
+                <mat-datepicker #pickerAuthorBirthDate></mat-datepicker>
+                <mat-error
+                  *ngIf="authorBirthDateModel.invalid && (authorBirthDateModel.dirty|| authorBirthDateModel.touched)">
+                  A
+                  szerző születési évét kötelező megadni</mat-error>
+              </p>
+              <p>Anyja neve <mat-form-field>
+                  <input name="author.nameOfTheMotherName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].nameOfTheMother" placeholder="Anyja neve"
+                    type="text" required minlength="1" #authorNameOfTheMotherModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorNameOfTheMotherModel.invalid && (authorNameOfTheMotherModel.dirty|| authorNameOfTheMotherModel.touched)">
+                    Az anyja nevét kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Állandó lakcím / Tartókodási hely::
+                Irányítószám:<mat-form-field>
+                  <input name="author.zipCodeName" matInput [(ngModel)]="listComponent.application.authors[i].zipCode"
+                    placeholder="Irányítószám" type="text" required minlength="1" #authorZipCodeModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorZipCodeModel.invalid && (authorZipCodeModel.dirty|| authorZipCodeModel.touched)">Az
+                    irányító
+                    számot kötelező megadni</mat-error>
+                </mat-form-field>
+                Város:<mat-form-field>
+                  <input name="author.townName" matInput [(ngModel)]="listComponent.application.authors[i].town"
+                    placeholder="Város" type="text" required minlength="1" #authorTownModel="ngModel" />
+                  <mat-error *ngIf="authorTownModel.invalid && (authorTownModel.dirty|| authorTownModel.touched)">A
+                    várost
+                    kötelező
+                    megadni</mat-error>
+                </mat-form-field> Utca,
+                házszám: <mat-form-field>
+                  <input name="author.streetAndNumberName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].streetAndNumber" placeholder="Utca, házszám"
+                    type="text" required minlength="1" #authorStreetAndNumberModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorStreetAndNumberModel.invalid && (authorStreetAndNumberModel.dirty|| authorStreetAndNumberModel.touched)">
+                    Az utcát, házszámot kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Telefon: <mat-form-field>
+                  <input name="author.telephoneNumberName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].telephoneNumber" placeholder="Telefon" type="text"
+                    required minlength="1" #authorTelephoneNumberModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorTelephoneNumberModel.invalid && (authorTelephoneNumberModel.dirty|| authorTelephoneNumberModel.touched)">
+                    A telefont kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Email: <mat-form-field>
+                  <input name="author.emailName" matInput [(ngModel)]="listComponent.application.authors[i].email"
+                    placeholder="Email" type="text" required minlength="1" #authorEmailModel="ngModel" />
+                  <mat-error *ngIf="authorEmailModel.invalid && (authorEmailModel.dirty|| authorEmailModel.touched)">A
+                    emailt
+                    kötelező
+                    megadni</mat-error>
+                </mat-form-field>
+              </p>
+              <p>Bankszámla
+                szám:
+                <mat-form-field>
+                  <input name="author.bankAccountNumberName" matInput
+                    [(ngModel)]="listComponent.application.authors[i].bankAccountNumber" placeholder="Bankszámla szám"
+                    type="text" required minlength="1" #authorBankAccountNumberModel="ngModel" />
+                  <mat-error
+                    *ngIf="authorBankAccountNumberModel.invalid && (authorBankAccountNumberModel.dirty|| authorBankAccountNumberModel.touched)">
+                    A bankszámla számot kötelező megadni</mat-error>
+                </mat-form-field>
+              </p>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </span>
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="projects">
+      <th mat-header-cell *matHeaderCellDef> Projekt(ek) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <span *ngFor="let project of listComponent.application.projects">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Projektek adatai
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              {{project}}
+            </mat-expansion-panel>
+          </mat-accordion>
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="thesisFiles">
+      <th mat-header-cell *matHeaderCellDef> Dolgozat, rezümé fájl(ok) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <ul>
+          <li *ngFor="let thesisFile of listComponent.thesisFiles">
+            {{thesisFile.tdkFile.date|date:'y.MM.dd. HH:mm:ss'}} <br>
+            <a [href]="fileUrl+thesisFile.tdkFile.fileName">{{fileUrl+thesisFile.tdkFile.fileName}}</a>
+            <br>
+            <button mat-raised-button color="basic" (click)="deleteThesisFile(thesisFile)"><span>Fájl
+                törlése: {{thesisFile.tdkFile.fileName}}</span></button>
+          </li>
+        </ul>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="addThesisFiles">
+      <th mat-header-cell *matHeaderCellDef> Dolgozat, rezümé hozzáadása </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <button mat-raised-button color="basic" (click)="addThesisFileDialog(listComponent)" class="expansion-button">Új
+          dolgozat, rezümé hozzáadása</button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="applicationFiles">
+      <th mat-header-cell *matHeaderCellDef> Jelentkezés fájl(ok) </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <ul>
+          <li *ngFor="let applicationFile of listComponent.applicationFiles">
+            {{applicationFile.tdkFile.date|date:'y.MM.dd. HH:mm:ss'}} <br>
+            <a [href]="fileUrl+applicationFile.tdkFile.fileName">{{fileUrl+applicationFile.tdkFile.fileName}}</a>
+            <br>
+            <button mat-raised-button color="basic" (click)="deleteApplicationFile(applicationFile)"><span>Fájl
+                törlése: {{applicationFile.tdkFile.fileName}}</span></button>
+          </li>
+        </ul>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="addApplicationFiles">
+      <th mat-header-cell *matHeaderCellDef> Jelentkezés fájl hozzáadása </th>
+      <td mat-cell *matCellDef="let listComponent">
+        <button mat-raised-button color="basic" (click)="addApplicationFileDialog(listComponent)"
+          class="expansion-button">Új jelentkezés fájl hozzáadása</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+<!--<mat-paginator [pageSizeOptions]="[50, 100, 200,500]" showFirstLastButtons></mat-paginator>-->

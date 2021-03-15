@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Jelentkezési fájl hozzáadása</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Fájl neve</mat-label>
+    <input matInput [(ngModel)]="data.tdkFile.fileName" #dataNameModel="ngModel" disabled>
+  </mat-form-field>
+  <button (click)="fileInput.click()" mat-raised-button color="primary" i18n>Fájl kiválasztása</button>
+  <span
+    style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+    <input type="file" name="photo" ng2FileSelect #fileInput [uploader]="uploader" />
+  </span>
+
+  <button type="button" mat-raised-button color="primary" (click)="uploader.uploadAll()"
+    [disabled]="!uploader.getNotUploadedItems().length"
+    matTooltip="A fájl feltöltése. A feltöltés után a mentés gombra kattintva mentődik el a fájl a TDK konferenciához. ">
+    <span i18n>
+      Fájl feltöltése</span>
+  </button>
+  <br>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial
+    [disabled]="this.data.tdkFile.fileName==undefined">Ok</button>
+</div>

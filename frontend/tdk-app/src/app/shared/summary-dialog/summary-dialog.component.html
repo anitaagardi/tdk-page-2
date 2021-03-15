@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>TDK dolgozat kivonata</h1>
+<div mat-dialog-content>
+
+  <mat-form-field>
+    <mat-label>TDK dolgozat kivonata</mat-label>
+    <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5"
+      [(ngModel)]="data"></textarea>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

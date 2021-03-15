@@ -1,0 +1,26 @@
+<h2 i18n>Bejelentkezés</h2>
+<mat-divider></mat-divider>
+<br>
+<form #userLoginForm>
+
+  <mat-form-field>
+    <input name="user.email" matInput [(ngModel)]="user.email" placeholder="email" i18n-placeholder type="text" required
+      minlength="1" #userEmailModel="ngModel" />
+    <mat-error *ngIf="userEmailModel.invalid && (userEmailModel.dirty|| userEmailModel.touched)" i18n>
+      Az email-t kötelező megadni</mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field>
+    <input name="user.password" matInput [(ngModel)]="user.password" placeholder=" jelszó" i18n-placeholder
+      type="password" required minlength="1" #userPasswordModel="ngModel" />
+    <mat-error *ngIf="userPasswordModel.invalid && (userPasswordModel.dirty|| userPasswordModel.touched)" i18n>A jelszót
+      kötelező megadni</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="login()"
+    [disabled]="userEmailModel.invalid||userPasswordModel.invalid"><span class="material-icons">
+      check_circle
+    </span><span i18n>Belépés</span></button>
+
+</form>

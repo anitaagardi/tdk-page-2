@@ -1,0 +1,35 @@
+<h2> Új menü létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #createMenuForm>
+  <mat-form-field>
+    <input name="menu.nameName" matInput [(ngModel)]="menu.name" placeholder="Menü elnevezése" type="text" required
+      minlength="1" #menuNameModel="ngModel" />
+    <mat-error *ngIf="menuNameModel.invalid && (menuNameModel.dirty|| menuNameModel.touched)">A menü elnevezését
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+  <label id="visibility-radio-group-label">Láthatóság </label>
+  <br>
+  <mat-radio-group name="menu.visibleName" aria-labelledby="visibility-radio-group-label" class="visibility-radio-group"
+    [(ngModel)]="menu.visible">
+    <mat-radio-button class="visibility-radio-button" *ngFor="let visibility of visibilities" [value]="visibility">
+      {{visibility}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <br>
+  <mat-form-field>
+    <input name="menu.positionName" matInput [(ngModel)]="menu.position" placeholder="Pozíció" type="number" required
+      minlength="1" #menuPositionModel="ngModel" min="1"
+      matTooltip="A menük pozíció sorrendben fognak megjelenni, de nem gond, ha több menünek is azonos a pozíciója " />
+    <mat-error *ngIf="menuPositionModel.invalid && (menuPositionModel.dirty|| menuPositionModel.touched)">A pozíciót
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+
+  <button mat-raised-button color="primary" (click)="addMenu()" [disabled]="(menuNameModel.invalid
+    ||menuPositionModel.invalid)"><span class="material-icons"
+      matTooltip="A menü létrehozása után csak akkor lesz látható a menü, ha menü elemeket is vittünk fel ">
+      add
+    </span>Mentés</button>
+</form>

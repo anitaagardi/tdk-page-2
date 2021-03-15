@@ -1,0 +1,56 @@
+<h2>Fotó galéria létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #photoGalleryUploadForm>
+  <mat-form-field>
+    <input name="photoGallery.nameName" matInput [(ngModel)]="photoGallery.name" placeholder="A fotó galéria neve"
+      type="text" required minlength="1" #photoGalleryNameModel="ngModel" />
+
+    <mat-error *ngIf="photoGalleryNameModel.invalid && (photoGalleryNameModel.dirty|| photoGalleryNameModel.touched)">
+      A fotó galéria nevét kötelező megadni</mat-error>
+
+  </mat-form-field>
+  <br>
+
+</form>
+<br>
+
+<h4>Kép feltöltése (csak képet adhat meg: jpg, jpeg, png)</h4>
+<button (click)="fileInput.click()" mat-raised-button color="primary">Fájl kiválasztása</button>
+<span
+  style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+  <input type="file" name="photo" ng2FileSelect #fileInput [uploader]="uploader" />
+</span>
+
+<button type="button" mat-raised-button color="primary" (click)="uploader.uploadAll()"
+  [disabled]="!uploader.getNotUploadedItems().length" matTooltip="A gombbal töltheti fel a fotó galériához a képet ">
+  Fájl feltöltése
+</button>
+<br>
+<br>
+<ng-container *ngIf="tdkFiles.length>0">
+  <table mat-table [dataSource]=" dataSourcePhotoGallery" class="mat-elevation-z8">
+    <ng-container matColumnDef="photo">
+      <th mat-header-cell *matHeaderCellDef>URL</th>
+      <td mat-cell *matCellDef="let tdkFile"><a [href]="fileUrl+tdkFile.fileName">{{fileUrl+tdkFile.fileName}}</a>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Kép törlése</th>
+      <td mat-cell *matCellDef="let tdkFile">
+        <button mat-raised-button color="primary" (click)="removeTDKFile(tdkFile)"
+          matTooltip="A feltöltött képeket törölheti, ekkor nem kerülnek a fotó galériához a képek "><span
+            class="material-icons">
+            delete
+          </span>Kép törlése</button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsPhotoGallery"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsPhotoGallery;"></tr>
+  </table>
+</ng-container>
+
+<button mat-raised-button color="primary" (click)=" addPhotoGallery()" [disabled]="photoGalleryNameModel.invalid"
+  matTooltip="Ezzel a gombbal készítheti el a fotó galériát"><span class="material-icons">
+    add
+  </span>Mentés</button>

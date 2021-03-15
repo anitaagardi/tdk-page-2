@@ -1,0 +1,18 @@
+mat-form-field {
+  display: block;
+  width: 100%;
+}
+
+.example-container {
+  height: 500px;
+  overflow: scroll;
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}

@@ -1,0 +1,81 @@
+<h2>Felhasználók</h2>
+<mat-divider></mat-divider>
+<br>
+<mat-form-field>
+  <mat-label><span class="material-icons">
+      search
+    </span>Keresés</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Keresés">
+</mat-form-field>
+<br>
+<div class="example-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="usersTable">
+
+    <ng-container matColumnDef="permissionSetting">
+      <th mat-header-cell *matHeaderCellDef> Jogosultság adás </th>
+      <td mat-cell *matCellDef="let user">
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Jogosultság adás művelet
+              </mat-panel-title>
+              <mat-panel-description>
+
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p><button mat-raised-button color="basic" (click)="setToAdmin(user)" class="expansion-button"
+                matTooltip="Az admin felhasználó minden jogosultsággal rendelkezik "><span class="material-icons">
+                  supervised_user_circle
+                </span>Admin</button> </p>
+            <p> <button mat-raised-button color="basic" (click)="setToFacultyAdmin(user)" class="expansion-button"
+                matTooltip="A kari admin felhasználó a tdk konferenciákat és jelentkezéseket tudja listázni. A jelentkezéseket tudja módosítani, törölni, bírálót hozzáadni, bírálat emailt kiküldeni "><span
+                  class="material-icons">
+                  supervisor_account
+                </span>Kari admin</button>
+            </p>
+            <p> <button mat-raised-button color="basic" (click)="setToUser(user)" class="expansion-button"
+                matTooltip="A regisztrációkor minden felhasználó ezt a jogosultságot kapja, ekkor csak tdk jelentkezést, fájl feltöltést tud csinálni. "><span
+                  class="material-icons">
+                  person_outline
+                </span>Felhasználó</button></p>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="permission">
+      <th mat-header-cell *matHeaderCellDef> Jogosultság</th>
+      <td mat-cell *matCellDef="let user">{{user.permission}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Név </th>
+      <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="registrationDate">
+      <th mat-header-cell *matHeaderCellDef> Regisztráció időpontja </th>
+      <td mat-cell *matCellDef="let user"> {{user.registrationDate | datePipe}} </td>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Felhasználó törlése </th>
+      <td mat-cell *matCellDef="let user"> <button mat-raised-button color="basic" (click)="deleteUser(user)"><span
+            class="material-icons">
+            delete
+          </span>Törlés</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+<!--<mat-paginator [pageSizeOptions]="[50, 100, 200,1000]" showFirstLastButtons></mat-paginator>-->

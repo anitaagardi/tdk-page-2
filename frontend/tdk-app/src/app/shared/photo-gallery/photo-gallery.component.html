@@ -1,0 +1,10 @@
+<div *ngFor="let photoGallery of photoGalleries">
+  <button mat-raised-button color="basic" (click)="setActualPhotoGallery(photoGallery)" class="expansion-button">
+    {{photoGallery?.name}}
+  </button>
+</div>
+<br>
+<br>
+<div *ngIf="actualPhotoGallery!=null">
+  <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" id="gallery"></ngx-gallery>
+</div>

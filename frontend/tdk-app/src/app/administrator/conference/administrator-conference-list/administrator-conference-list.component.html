@@ -1,0 +1,156 @@
+<h2>Létrehozott konferenciák</h2>
+<mat-divider></mat-divider>
+<br>
+<mat-form-field>
+  <mat-label><span class="material-icons">
+      search
+    </span>Keresés</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Keresés">
+</mat-form-field>
+<mat-divider></mat-divider>
+<br>
+<div class="example-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <ng-container matColumnDef="name" sticky>
+      <th mat-header-cell *matHeaderCellDef> Név </th>
+      <td mat-cell *matCellDef="let conference">
+
+        <mat-form-field>
+          <input matInput [(ngModel)]="conference.name" type="text" required minlength="1"
+            #conferenceNameModel="ngModel" />
+          <mat-error *ngIf="conferenceNameModel.invalid && (conferenceNameModel.dirty|| conferenceNameModel.touched)">A
+            konferencia címét kötelező megadni</mat-error>
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="operations">
+      <th mat-header-cell *matHeaderCellDef>Műveletek</th>
+      <td mat-cell *matCellDef="let conference">
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Műveletek
+              </mat-panel-title>
+              <mat-panel-description>
+
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <button mat-raised-button color="basic" (click)="updateConference(conference)" class="expansion-button"
+              matTooltip="A konferencia elemeinek módosítása után menti a konferencia új adatait "><span
+                class="material-icons">
+                settings
+              </span>Módosítás</button> <br>
+            <button mat-raised-button color="basic" (click)="deleteConference(conference)"
+              class="expansion-button"><span class="material-icons">
+                delete
+              </span>Törlés</button> <br>
+            <button mat-raised-button color="basic" (click)="getParticipants(conference)"
+              matTooltip="A jelentkezetteket listázza, itt lehet a jelentkezéseket módosítani, törölni, bírálót hozzáadni, emailt küldeni "
+              class="expansion-button"><span class="material-icons">
+                list
+              </span>Résztvevők</button><br>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="beginDate">
+      <th mat-header-cell *matHeaderCellDef> A konferencia kezdete </th>
+      <td mat-cell *matCellDef="let conference">
+        <input matInput [matDatepicker]="pickerBeginDate" [(ngModel)]="conference.beginDate"
+          #conferenceBeginDateModel="ngModel">
+        <mat-datepicker-toggle matSuffix [for]="pickerBeginDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerBeginDate></mat-datepicker>
+        <mat-error
+          *ngIf="conferenceBeginDateModel.invalid && (conferenceBeginDateModel.dirty|| conferenceBeginDateModel.touched)">
+          A
+          konferencia jelentkezésének kezdetét kötelező megadni</mat-error>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef> A konferencia vége </th>
+      <td mat-cell *matCellDef="let conference">
+        <input matInput [matDatepicker]="pickerEndDate" [(ngModel)]="conference.endDate"
+          #conferenceEndDateModel="ngModel">
+        <mat-datepicker-toggle matSuffix [for]="pickerEndDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerEndDate></mat-datepicker>
+        <mat-error
+          *ngIf="conferenceEndDateModel.invalid && (conferenceEndDateModel.dirty|| conferenceEndDateModel.touched)">
+          A
+          konferencia jelentkezésének végét kötelező megadni</mat-error>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="fileUploadClosingDate">
+      <th mat-header-cell *matHeaderCellDef> A fájl felöltésének határideje </th>
+      <td mat-cell *matCellDef="let conference">
+        <input matInput [matDatepicker]="pickerFileUploadClosingDate" [(ngModel)]="conference.fileUploadClosingDate"
+          #conferenceFileUploadClosingDateModel="ngModel">
+        <mat-datepicker-toggle matSuffix [for]="pickerFileUploadClosingDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFileUploadClosingDate></mat-datepicker>
+        <mat-error
+          *ngIf="conferenceFileUploadClosingDateModel.invalid && (conferenceFileUploadClosingDateModel.dirty|| conferenceFileUploadClosingDateModel.touched)">
+          A
+          fájl feltöltésének határidejét kötelező megadni</mat-error>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="dataManagenentPolicy">
+      <th mat-header-cell *matHeaderCellDef> Adatkezelési szabályzat </th>
+      <td mat-cell *matCellDef="let conference">
+
+        <mat-form-field>
+          <!-- <input matInput [(ngModel)]="conference.dataManagenentPolicy" type="text"
+            #conferenceDataManagenentPolicyModel="ngModel" />-->
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5" [(ngModel)]="conference.dataManagementPolicy" type="text"
+            #conferenceDataManagenentPolicyModel="ngModel"></textarea>
+          <!-- <textarea matInput autosize [(ngModel)]="conference.dataManagenentPolicy" type="text"
+            #conferenceDataManagenentPolicyModel="ngModel"></textarea>-->
+
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="dataManagenentPolicy_EN">
+      <th mat-header-cell *matHeaderCellDef> Adatkezelési szabályzat (angolul) </th>
+      <td mat-cell *matCellDef="let conference">
+
+        <mat-form-field>
+          <!-- <input matInput [(ngModel)]="conference.dataManagenentPolicy" type="text"
+            #conferenceDataManagenentPolicyModel="ngModel" />-->
+          <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5" [(ngModel)]="conference.dataManagementPolicy_EN" type="text"
+            #conferenceDataManagenentPolicyModel_EN="ngModel"></textarea>
+          <!-- <textarea matInput autosize [(ngModel)]="conference.dataManagenentPolicy" type="text"
+            #conferenceDataManagenentPolicyModel="ngModel"></textarea>-->
+
+        </mat-form-field>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="projects" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef> Projektek </th>
+      <td mat-cell *matCellDef="let conference">
+        <div *ngFor="let project of conference.projects; index as i">
+          <mat-form-field>
+            <!--<input matInput [(ngModel)]="conference.projects[i]" type="text" required minlength="1"
+              #conferenceProjectModel="ngModel" />-->
+            <textarea matInput cdkTextareaAutosize #autosizeProject="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="5" [(ngModel)]="conference.projects[i]" type="text" required
+              #conferenceProjectModel="ngModel"></textarea>
+          </mat-form-field>
+        </div>
+      </td>
+    </ng-container>
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+<!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->

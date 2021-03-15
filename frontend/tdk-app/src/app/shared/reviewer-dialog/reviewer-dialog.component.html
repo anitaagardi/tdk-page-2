@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Bíráló hozzáadása</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Bíráló neve</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Bíráló e-mail címe</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Bíráló munkahelye</mat-label>
+    <input matInput [(ngModel)]="data.workplace">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

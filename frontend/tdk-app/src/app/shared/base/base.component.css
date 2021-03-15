@@ -1,0 +1,125 @@
+.button {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  background-color: rgba(255, 255, 255, .08)
+}
+
+.userFormat {
+  background-color: #0366a1
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+
+.tdkImg {
+  width: 900px;
+  height: 218px;
+  float: right;
+
+}
+
+.logo {
+  /* clear: both;
+  height: 50px;
+  float: right;*/
+  height: 50px;
+  color: white;
+}
+
+#acknowledgement {
+  margin-left: 300px !important;
+}
+
+#header {
+  padding: 0px !important;
+}
+
+#router-outlet {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 576px;
+    overflow: auto;
+  }
+
+  #links,
+  #acknowledgement,
+  #menu,
+  #main {
+    width: 576px;
+  }
+
+  #featured {
+    width: 500px;
+    padding-left: 60px;
+    margin: 0px;
+
+  }
+
+  .tdkImg {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  router-outlet {
+    margin: 10px;
+  }
+
+  #acknowledgement {
+    margin-left: 0px !important;
+    font-size: 10px;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width:576px) {
+  .container {
+    width: 768px;
+    overflow: auto;
+  }
+
+  #links,
+  #acknowledgement,
+  #menu,
+  #main {
+    width: 768px;
+  }
+
+  #featured {
+    width: 700px;
+    padding-left: 60px;
+    margin: 0px;
+
+  }
+
+  .tdkImg {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  router-outlet {
+    margin: 10px;
+  }
+
+  #acknowledgement {
+    margin-left: 0px !important;
+    font-size: 10px;
+    position: absolute;
+  }
+
+
+}

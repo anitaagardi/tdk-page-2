@@ -1,0 +1,1 @@
+export const visibilities: string[] = ['Látható', 'Nem látható'];

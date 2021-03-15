@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+
+}
+
+.singleButton {
+  width: 50%;
+  display: inline-block;
+}
+
+.mat-row {
+  height: auto;
+}
+
+.example-container {
+  height: 450px;
+  overflow: scroll;
+}
+
+.mat-cell {
+  padding: 15px 15px 15px 15px;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;
+
+}
+
+
+button {
+  display: block;
+  width: 100%;
+}
+
+.expansion-button {
+  width: 100%;
+}

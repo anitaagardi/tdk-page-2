@@ -1,0 +1,1891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7a62195baddbd9a3c481dd8efa24b0be6df242a3" datatype="html">
+        <source>Regisztráció</source>
+        <target>Regisztráció</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6da2f954ce324736655f807349b9a2ac1ebac044" datatype="html">
+        <source>A felhasználó neve (vezetéknév, keresztnév)</source>
+        <target>A felhasználó neve (vezetéknév, keresztnév)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8d3cab22337aa398b6f3c99cbe62e7c5b2ba59e6" datatype="html">
+        <source>A nevet kötelező megadni
+    </source>
+        <target>A nevet kötelező megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0b15bf6fa1e5bdabc9fde97a14bee63a5d5e62f6" datatype="html">
+        <source>email</source>
+        <target>email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-forgotten-password/user-forgotten-password.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="83c5b7ada787e84983d08276b16d9c1d3bde10bf" datatype="html">
+        <source>Az email-t kötelező
+      megadni
+    </source>
+        <target>Az email-t kötelező
+      megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deef26e9d41cd0af07aaba648798c823025e86ea" datatype="html">
+        <source>email mégegyszer</source>
+        <target>email mégegyszer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ca5e925228c744cc923e1498c4c0030d960f17a" datatype="html">
+        <source> jelszó</source>
+        <target> jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1f6425e2477d207ad3fb407cdf20fb982803267" datatype="html">
+        <source>A jelszót kötelező megadni</source>
+        <target>A jelszót kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7b40697431a3c1a04aac06a1b509eeb3590184a" datatype="html">
+        <source>jelszó mégegyszer</source>
+        <target>jelszó mégegyszer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0d9d40a3e7bffea3e486384209ca3a48593b6ae9" datatype="html">
+        <source>A sikeres regisztációról emailben is értesítést kap</source>
+        <target>A sikeres regisztációról emailben is értesítést kap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-registration/user-registration.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="98c12ff8d2c511d64af50898423c1afb8538d931" datatype="html">
+        <source>Bejelentkezés</source>
+        <target>Bejelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8e5e86f085ac29ddff3547d8ad5c56c27c2de104" datatype="html">
+        <source>
+      Az email-t kötelező megadni</source>
+        <target>
+      Az email-t kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-forgotten-password/user-forgotten-password.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="457122d0623dd465ed83747c5a6055bcfb99fc5d" datatype="html">
+        <source>A jelszót
+      kötelező megadni</source>
+        <target>A jelszót
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5aa8fd62d4783cdd77edfeeb7ca07c48b57a5952" datatype="html">
+        <source>Belépés</source>
+        <target>Belépés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-login/user-login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0c1f5110e9b366e04f0a441702bf5fb087a0e49" datatype="html">
+        <source>Elfelejtett jelszó</source>
+        <target>Elfelejtett jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-forgotten-password/user-forgotten-password.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0bdc527375a257ea40d9b3b6a4feafe2415844fd" datatype="html">
+        <source>Az új jelszót az email címre küldjük ki</source>
+        <target>Az új jelszót az email címre küldjük ki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-forgotten-password/user-forgotten-password.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a928aec0e09fc36a226b3e28d8db6c42ab88f449" datatype="html">
+        <source>Új jelszót
+      kérek</source>
+        <target>Új jelszót
+      kérek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-forgotten-password/user-forgotten-password.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b4ea9b40e13d098a0d11205f7e949c3302c2c860" datatype="html">
+        <source>Online jelentkezés</source>
+        <target>Online jelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6750d18818b6dcb5c3d42916f0b3e6597e689678" datatype="html">
+        <source>Pályamunka</source>
+        <target>Pályamunka</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a17454bb4e93d76dd5f334961ba7785c54a1c975" datatype="html">
+        <source>Konferencia</source>
+        <target>Konferencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="22724fb9678d8f17bbbc91f340d3405b2e509e80" datatype="html">
+        <source>A pályamunka címe magyarul</source>
+        <target>A pályamunka címe magyarul</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="55345216cd28ada1c96b35cf591f45ca084f0bd0" datatype="html">
+        <source>
+      A pályamunka címét
+      kötelező megadni</source>
+        <target>
+      A pályamunka címét
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1e8bd024b69075f1cc65b902027b640dbdf16494" datatype="html">
+        <source>A pályamunka címe angolul</source>
+        <target>A pályamunka címe angolul</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71d9bd703dcfb01409ee5188fae9463889c0ca14" datatype="html">
+        <source>
+      A pályamunka angol címét
+      kötelező megadni</source>
+        <target>
+      A pályamunka angol címét
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="356a3ecd00390f211d7b331a775163f815890aee" datatype="html">
+        <source>Kar</source>
+        <target>Kar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">414</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6a7d5b38bad09c84eb2df5eb9bf2f6c798e76596" datatype="html">
+        <source>Kari szekció</source>
+        <target>Kari szekció</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b0c137bdf0d3f8b28f3151d90308beae27f6fc9e" datatype="html">
+        <source>Különleges technikai eszközök az előadás megtartásához</source>
+        <target>Különleges technikai eszközök az előadás megtartásához</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="81b368192391bd64c08116a362bf5064fa980cf6" datatype="html">
+        <source>A dolgozat nyelve</source>
+        <target>A dolgozat nyelve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="053115e95b93cb380ba560a5e81ff0f7d031b383" datatype="html">
+        <source> Témavezetők</source>
+        <target> Témavezetők</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f329eb17fbf4cbd50145ae74b68a300d5e0d84c" datatype="html">
+        <source>A témavezető neve</source>
+        <target>A témavezető neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="44d6df0548dd185737fd81b9493f12c72c3116c0" datatype="html">
+        <source>A
+      témavezető nevét
+      kötelező megadni</source>
+        <target>A
+      témavezető nevét
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ed3428259897e914a15dc5a6c9e63d25c6a092c" datatype="html">
+        <source> Témavezető munkahelye</source>
+        <target> Témavezető munkahelye</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6bc91d5d74da588de056d34717ca01808d3b7001" datatype="html">
+        <source>Intézet vagy külsősnél munkahely</source>
+        <target>Intézet vagy külsősnél munkahely</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a6e09b460506502136f856764140e669bcf5a8b7" datatype="html">
+        <source>
+      Az
+      intézetet kötelező megadni</source>
+        <target>
+      Az
+      intézetet kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c0b20829578d50c3694b1faa3f193f3f8197e861" datatype="html">
+        <source>Munkakör</source>
+        <target>Munkakör</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b82c894ad9c23a056768e5fb4b3f13ab0191698" datatype="html">
+        <source>Témavezető felvitele</source>
+        <target>Témavezető felvitele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4d69b8ca21a28ba2a759dba1a596ceb865831fdc" datatype="html">
+        <source>Témavezetők listája</source>
+        <target>Témavezetők listája</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a91aaa695227a97143648ec4dd715bfcebde00cb" datatype="html">
+        <source>Név</source>
+        <target>Név</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">410</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39d91dc41dc3f85633479f9502cce36541da60ef" datatype="html">
+        <source>Beosztása</source>
+        <target>Beosztása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5bc88aa3fdb10051f54a02f00b331c30c9fe508b" datatype="html">
+        <source>Intézet</source>
+        <target>Intézet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="19a69591b15241f157fb7bcfd9abfd208426b49d" datatype="html">
+        <source>Témavezető törlése</source>
+        <target>Témavezető törlése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="04b3236a3231aa31df8fc4b004f46bb4db2c0c2c" datatype="html">
+        <source> Szerző(k)</source>
+        <target> Szerző(k)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="958de90a7a220db8518ba829e3ab783330eeb5f8" datatype="html">
+        <source>Szerző neve</source>
+        <target>Szerző neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7447a9e106b0336e4084b897fd56fbb1954de57f" datatype="html">
+        <source>A szerző nevét
+      kötelező megadni</source>
+        <target>A szerző nevét
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c9baad28716f32740c439c0ac2816e4131187e2" datatype="html">
+        <source>Képzés típusa</source>
+        <target>Képzés típusa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">219</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">440</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9c29790b683336a3fa77122a78e3fb4bf2593713" datatype="html">
+        <source>Szak</source>
+        <target>Szak</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">230</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">418</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="294465fa60435d757382217767d117607f8b2801" datatype="html">
+        <source>Aktív félévek száma</source>
+        <target>Aktív félévek száma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">422</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="738c170e9d01455a8fb8657a27d33327accfbbd0" datatype="html">
+        <source>Az aktív
+      félévek számát
+      kötelező megadni</source>
+        <target>Az aktív
+      félévek számát
+      kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee0ac14978e5fa5a8b9f112fe4e6cfeac46e7502" datatype="html">
+        <source>A TDK konferencia félévében várhatóan
+    az adott
+    szakon befejezi
+    tanulmányait</source>
+        <target>A TDK konferencia félévében várhatóan
+    az adott
+    szakon befejezi
+    tanulmányait</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="65602d5c969eeffa59de8b9085bd45ec09848f5c" datatype="html">
+        <source> Szerzők adatai az esetleges pénzdíjak kifizetéséhez</source>
+        <target> Szerzők adatai az esetleges pénzdíjak kifizetéséhez</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="398c390364aee4bebeea6cd59143f7ca4239473f" datatype="html">
+        <source>Neptun kód</source>
+        <target>Neptun kód</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">432</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9978ba92b41d4ad5f7959a8b6a9ec17127af48ce" datatype="html">
+        <source>A
+      neptun kódot kötelező megadni</source>
+        <target>A
+      neptun kódot kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cee9d835b38ff70ad362447ea55f3e7e7c402505" datatype="html">
+        <source>Személyi igazolvány szám</source>
+        <target>Személyi igazolvány szám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">436</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f0f120b125c6ce4e865fff2e99cbacf2dbbb02aa" datatype="html">
+        <source>A
+      személyi igazolvány számot kötelező megadni
+    </source>
+        <target>A
+      személyi igazolvány számot kötelező megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">280</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4107e43212708a67b9b050807e0f3d433b369470" datatype="html">
+        <source> Adózási státusza</source>
+        <target> Adózási státusza</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b6678c4b72286684bed4f3b7a5b4cac76ac005a" datatype="html">
+        <source>Dolgozó: </source>
+        <target>Dolgozó: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4ac388dd0ee08f4b5a8df8056bb27a26d88948d" datatype="html">
+        <source>Adóazonosító jel</source>
+        <target>Adóazonosító jel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">452</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10774c704e623e01041e324328316cd1b565895f" datatype="html">
+        <source>
+      Az adóazonosító jelet kötelező megadni
+    </source>
+        <target>
+      Az adóazonosító jelet kötelező megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bf924983b846f32d5dc04c5d33c20981a24e094a" datatype="html">
+        <source> Születési hely, idő</source>
+        <target> Születési hely, idő</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">313</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c2cc13aa826412bc0ceb141c8f01d05fd0b1e465" datatype="html">
+        <source>Születési hely</source>
+        <target>Születési hely</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">456</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bd91b80b2b067d34359fed5391b87cbdc6849072" datatype="html">
+        <source>A
+      születési helyet kötelező megadni</source>
+        <target>A
+      születési helyet kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">318</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="27cfc2fa2e543d1cafe46278d29ece016f7e32b1" datatype="html">
+        <source>Születési idő</source>
+        <target>Születési idő</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">323</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">460</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9d1e308c67475f3b7987957f8796047ec446686" datatype="html">
+        <source>
+    A
+    szerző születési évét kötelező megadni</source>
+        <target>
+    A
+    szerző születési évét kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">328</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1cc3b66bade4ab9ae59c69fd936ba9385e9e2fe5" datatype="html">
+        <source>Anyja neve</source>
+        <target>Anyja neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">333</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">464</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bcb92285dbb10264e98a5a41f78c98ec038664d0" datatype="html">
+        <source>
+      Az anyja nevét kötelező megadni</source>
+        <target>
+      Az anyja nevét kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">337</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ad062f751ffa46c8f8ea04434d456eba4aad4fc" datatype="html">
+        <source>Állandó lakcím / Tartózkodási hely</source>
+        <target>Állandó lakcím / Tartózkodási hely</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">341</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf7ae57e37818d096700c4e8f635e6a975b36bae" datatype="html">
+        <source>Irányítószám</source>
+        <target>Irányítószám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">343</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">468</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a67c295c741ed2b1ca47dd2c1344a91cbd17cb4f" datatype="html">
+        <source>Az
+      irányító
+      számot kötelező megadni</source>
+        <target>Az
+      irányító
+      számot kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">345</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="22ff4285977154ea36f93f329f724d9750292d3b" datatype="html">
+        <source>Város</source>
+        <target>Város</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">351</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">472</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0d356084dc8b8953f3d96eb14196796989d61f34" datatype="html">
+        <source>A várost
+      kötelező
+      megadni</source>
+        <target>A várost
+      kötelező
+      megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">353</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1668cdf17a393569e0b109ddf0cc0a39d364e50c" datatype="html">
+        <source>Utca, házszám</source>
+        <target>Utca, házszám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">359</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">476</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cc55f11b87702cabe3bac2ca6904f81872e76905" datatype="html">
+        <source>
+      Az utcát, házszámot kötelező megadni</source>
+        <target>
+      Az utcát, házszámot kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">363</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbbc5fc52b2dbad2f6313f78cd491475b7df01a9" datatype="html">
+        <source>Telefon</source>
+        <target>Telefon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">368</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="04e482c510ff91e767a345c4ba4e155af50732fd" datatype="html">
+        <source>
+      A telefont kötelező megadni</source>
+        <target>
+      A telefont kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">372</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">377</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">484</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3adab0990f2630d039ca904a181236ab8b35ed26" datatype="html">
+        <source>A emailt
+      kötelező
+      megadni</source>
+        <target>A emailt
+      kötelező
+      megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">379</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9973d5d642468cb8e3de541e1d40153635b1cc46" datatype="html">
+        <source>Bankszámla szám</source>
+        <target>Bankszámla szám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">385</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0013f5f8245b8944799bd91c714b93d3f9db08a1" datatype="html">
+        <source>
+      A bankszámla számot kötelező megadni</source>
+        <target>
+      A bankszámla számot kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">389</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39f7eb1f0dffa852a1e06c666b532c8c3c9b2341" datatype="html">
+        <source>Szerző felvitele</source>
+        <target>Szerző felvitele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">399</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eed9e40189457f9c6f3bed71f9f1325af5411615" datatype="html">
+        <source>Szerzők</source>
+        <target>Szerzők</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">403</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a9b322ebaff5fe41d0c40039047897c213e64603" datatype="html">
+        <source>Várhatóan tanulmányait az adott
+          félévben befejezi</source>
+        <target>Várhatóan tanulmányait az adott
+          félévben befejezi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">426</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3fa92db6b99c1b9828bbd752e4d81aedd6ae553b" datatype="html">
+        <source>Adózási státusza</source>
+        <target>Adózási státusza</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">444</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8bad1083e6220e0f7789f120967ab47cb52f8190" datatype="html">
+        <source>Dolgozó</source>
+        <target>Dolgozó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">448</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7d6250680cd84814547eeff849fecd1daa450229" datatype="html">
+        <source>Telefonszám</source>
+        <target>Telefonszám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">480</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aadcab9c7c1542384b07f1025519d616ea7493c7" datatype="html">
+        <source>Bankszámlaszám</source>
+        <target>Bankszámlaszám</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">488</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="daad8d31b28d18dd8a790875327769a0c44bd4e5" datatype="html">
+        <source>Szerző törlése</source>
+        <target>Szerző törlése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">494</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">498</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="232ffaeff4315bf98fbd1ac30824ef0a06988f00" datatype="html">
+        <source>Adatkezelési nyilatkozat</source>
+        <target>Adatkezelési nyilatkozat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">508</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="345225a01973c29a76f8f93f4d647052465ca756" datatype="html">
+        <source>Projektek</source>
+        <target>Projektek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">521</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="931cf9948ed217fea6aa0f41cc16a1578ed158d1" datatype="html">
+        <source>A dolgozat rövid összefoglalása (1000-2000 karakter). Eddig megadott karakterek száma</source>
+        <target>A dolgozat rövid összefoglalása (1000-2000 karakter). Eddig megadott karakterek száma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">533</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="972953a895f0b79df803ce9b3d4a445d7153ed64" datatype="html">
+        <source>Kérem a jelentkezési lapot nyomtassa ki, írja(ák) alá, a konzulens(ekkel) írassa alá,
+  és töltse fel a
+  'Jelentkezési lap feltöltése' menüpont alatt.</source>
+        <target>Kérem a jelentkezési lapot nyomtassa ki, írja(ák) alá, a konzulens(ekkel) írassa alá,
+  és töltse fel a
+  'Jelentkezési lap feltöltése' menüpont alatt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">539</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="32ee003c874abf16a6aa183a5166bb7c5d64f752" datatype="html">
+        <source>Jelentkezés</source>
+        <target>Jelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-appyling-tdk/user-appyling-tdk.component.html</context>
+          <context context-type="linenumber">548</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="050817ae9263dce9bac44f6fed60dba48eee9654" datatype="html">
+        <source>Jelszó módosítás</source>
+        <target>Jelszó módosítás</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="95f9a1eb7e4b6f97c54221f0b4868a32c9431cfa" datatype="html">
+        <source>Az email-t
+      kötelező megadni
+    </source>
+        <target>Az email-t
+      kötelező megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="232d46221c67273d683ff15118dc3ab0c20cda51" datatype="html">
+        <source>Régi jelszó</source>
+        <target>Régi jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ac20fe3df74ee9c57fbdefb0728e5ed9aaa427b" datatype="html">
+        <source>A jelszót
+      kötelező megadni
+    </source>
+        <target>A jelszót
+      kötelező megadni
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56ef7024a4153a18e813c092e577c30a7bd689ea" datatype="html">
+        <source>Új jelszó</source>
+        <target>Új jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1e54f6c740855a594497415d43b857bf6a48cf37" datatype="html">
+        <source>Új jelszó mégegyszer</source>
+        <target>Új jelszó mégegyszer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c1c0eeee63dacd8be943443efcf0b49424b02470" datatype="html">
+        <source>Mentés</source>
+        <target>Mentés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-change-password/user-change-password.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7fa961b8aaf40a01258167f4ff0dd414a61aa51a" datatype="html">
+        <source>TDK dolgozat, rezümé feltöltése</source>
+        <target>TDK dolgozat, rezümé feltöltése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7c112933b0143415c45b3c93bf09127fe3064261" datatype="html">
+        <source>TDK dolgozat címe</source>
+        <target>TDK dolgozat címe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="73ef580fb681083545b92665d186eaa9e4d53c04" datatype="html">
+        <source>A fájl neve</source>
+        <target>A fájl neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5258bfc48ae291d613e0030b13fcdbaf864d35e2" datatype="html">
+        <source>
+      A fájl nevét kötelező megadni</source>
+        <target>
+      A fájl nevét kötelező megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="75272a08bd64bd591179f973ecbcdfcbc795c426" datatype="html">
+        <source>Fájl kiválasztása</source>
+        <target>Fájl kiválasztása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thesis-file-uploading-dialog/thesis-file-uploading-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/application-file-uploading-dialog/application-file-uploading-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b8da630c210fd06de8d7a53b62c34861fdf41934" datatype="html">
+        <source>
+      Fájl feltöltése</source>
+        <target>
+      Fájl feltöltése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/thesis-file-uploading-dialog/thesis-file-uploading-dialog.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/application-file-uploading-dialog/application-file-uploading-dialog.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="acf989695d1cb5c7928f0000266e67a9390bbcb0" datatype="html">
+        <source>A fájl feltöltése. A feltöltés után a mentés gombra kattintva mentődik el a fájl a TDK konferenciához. </source>
+        <target>A fájl feltöltése. A feltöltés után a mentés gombra kattintva mentődik el a fájl a TDK konferenciához. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d3dc8578ac9bf32c2803c613eb543a6a8f4cabc2" datatype="html">
+        <source>A feltöltött fájl mentése a TDK konferenciához </source>
+        <target>A feltöltött fájl mentése a TDK konferenciához </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-uppload/user-file-uppload.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bd2f8c13b75c8184131538fb6571206d9a775ce8" datatype="html">
+        <source>TDK dolgozatok, rezümék</source>
+        <target>TDK dolgozatok, rezümék</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="00cdf56bf6f028173ffa8210d4ef7414f439e9c6" datatype="html">
+        <source>Fájlnév</source>
+        <target>Fájlnév</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7477603c4edfc1d77a6c57b7eee5332de9bce412" datatype="html">
+        <source>Dátum </source>
+        <target>Dátum </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ce7e7474b2806234f42003c26465d5e932b6072" datatype="html">
+        <source>Letöltés</source>
+        <target>Letöltés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cb94a3de49a25599aa70da7bea546728e7e906c8" datatype="html">
+        <source>Fájl
+            letöltése</source>
+        <target>Fájl
+            letöltése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6eb2218a463dc7c579adfa5948160892479fdebc" datatype="html">
+        <source> Konferencia </source>
+        <target> Konferencia </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5f81189db0577c507b6176d6b2d81834aab2e3aa" datatype="html">
+        <source>TDK cím</source>
+        <target>TDK cím</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9fc846f0fd6f933c6ba25f0073af48fcca4f2a22" datatype="html">
+        <source>Törlés</source>
+        <target>Törlés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5bde7d7ac662a2dcded9d29979e25afa5cc9d068" datatype="html">
+        <source>Fájl törlése</source>
+        <target>Fájl törlése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-list/user-file-list.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="70ad832d30041293568f59548d7f55b8bfea4de6" datatype="html">
+        <source>Nyomtatás</source>
+        <target state="needs-translation"/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="22afa585874232b15ef52c25413fcd3ce44b1702" datatype="html">
+        <source>Adatlap</source>
+        <target>Adatlap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a408653cd574ea14c0a6a956a49c43a2f44905dc" datatype="html">
+        <source>A Miskolci Egyetem </source>
+        <target>A Miskolci Egyetem </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6b7f147167f285c878ca667ad063004c03b0475f" datatype="html">
+        <source>TDK konferenciáján előadást tartók
+      számára</source>
+        <target>TDK konferenciáján előadást tartók
+      számára</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2c405038091f563a977c17e7b5f83d754b684f15" datatype="html">
+        <source>Szerző(k) neve</source>
+        <target>Szerző(k) neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ca2fc5ece79f5b975ec41138d191a1bddb97c00" datatype="html">
+        <source>Várhatóan a TDK konferencia félévében tanulmányait befejezi-e</source>
+        <target>Várhatóan a TDK konferencia félévében tanulmányait befejezi-e</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b0ffcd93c805ed3766406dc1c2228cbb6acf7b97" datatype="html">
+        <source>A pályamunka címe</source>
+        <target>A pályamunka címe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6e5b45b689c8db52a48650a831cfc001c6e8e2ab" datatype="html">
+        <source>A pályamunka címe (angolul)</source>
+        <target>A pályamunka címe (angolul)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf91ae0ac983a6f22680ce9f7e1a1f05ce3f7050" datatype="html">
+        <source>A pályamunka nyelve</source>
+        <target>A pályamunka nyelve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28c81b2f19ba2c89af2c781d3c4e1ed85e0a4d91" datatype="html">
+        <source>Kar neve</source>
+        <target>Kar neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5a17dc17e5295b54363040308f23f35a0e29cfb5" datatype="html">
+        <source>Kari szekció neve</source>
+        <target>Kari szekció neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="66e6e4e43ae75471ede22ac52c571c4f7acfcef4" datatype="html">
+        <source>Témavezető(k) neve</source>
+        <target>Témavezető(k) neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6c11b137c7f84a4b35935d3df45e75119747072b" datatype="html">
+        <source>Szerző(k) adatai </source>
+        <target>Szerző(k) adatai </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4a7f04cc58bbc52db2ea6c824f55161f586ea0cb" datatype="html">
+        <source>Adóazonosító jel
+      </source>
+        <target>Adóazonosító jel
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f9fef08ecd1369ebbc055bec76369f34999f78a1" datatype="html">
+        <source>Születési hely, idő
+      </source>
+        <target>Születési hely, idő
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7dfa4f8dd98cbff9acaa4db96e7a76aa64109fc7" datatype="html">
+        <source>Elérhetőség</source>
+        <target>Elérhetőség</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b32ddd817bf21e626660e117a72e3f40f19a9f0f" datatype="html">
+        <source>Mobil:</source>
+        <target>Mobil:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="91b96d7228b6e05c238fa4e39abfc17ad51a6eef" datatype="html">
+        <source>Email:</source>
+        <target>Email:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a3acb166ccc59d5325544fdb3d7dfe8aeef467c6" datatype="html">
+        <source> A fentiekben részletezett adatok és a mellékelt 1 oldalas tartalmi
+      összefoglaló alapján kérem az ME</source>
+        <target> A fentiekben részletezett adatok és a mellékelt 1 oldalas tartalmi
+      összefoglaló alapján kérem az ME</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3fb7bcdf9f0f3a7ac96980221d4ad088bbce47db" datatype="html">
+        <source>TDK konferencián a pályamunka bemutatásának
+      elfogadását</source>
+        <target>TDK konferencián a pályamunka bemutatásának
+      elfogadását</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d927bb2e6a3703f1c604d882f82966074dcd72ec" datatype="html">
+        <source> A közölt adatok a valóságnak megfelelnek</source>
+        <target> A közölt adatok a valóságnak megfelelnek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="536bbf960c98bbc2db8a092ad1b1c31d708ba6f0" datatype="html">
+        <source> Konzulens(ek) aláírása</source>
+        <target> Konzulens(ek) aláírása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec87aca20b4729dd9b3eca2b39e1c7fea2c0279e" datatype="html">
+        <source> Szerző(k) aláírása</source>
+        <target> Szerző(k) aláírása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applying-tdk-print/user-applying-tdk-print.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ed43254f21929bf7b36bf2181e90936209218935" datatype="html">
+        <source>TDK jelentkezések</source>
+        <target>TDK jelentkezések</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4cfb29553873aabb62653742888219a7e5981451" datatype="html">
+        <source>Keresés</source>
+        <target>Keresés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="85e93bf62aeda8c93f4e585aaf52527f4694aa0c" datatype="html">
+        <source> Pályamunka címe </source>
+        <target> Pályamunka címe </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="90bdf354cf9f2259ec602ce76673d31b7f46e10d" datatype="html">
+        <source>Pályamunka címe (angolul)</source>
+        <target>Pályamunka címe (angolul)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbb715717265f3dea4bf5338592f1a095cfe0bb6" datatype="html">
+        <source>Jelentkezés nyomtatása</source>
+        <target>Jelentkezés nyomtatása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30d7cd9fdf756264652d39c93c6a9e8c7c84428a" datatype="html">
+        <source>PDF
+            letöltése</source>
+        <target>PDF
+            letöltése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c81ed926a5915916847282677500036d326feb0" datatype="html">
+        <source>TDK dolgozat nyelve</source>
+        <target>TDK dolgozat nyelve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="44fb740c9fcd82e69aab586c931590325ffcc431" datatype="html">
+        <source>Témavezető(k)</source>
+        <target>Témavezető(k)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8c15f47079889cefa69ca1225d500e3ca6ad7187" datatype="html">
+        <source> Témavezető adatai</source>
+        <target> Témavezető adatai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="78726e4036c8a772cd71bcb0c00d480e9b8737a3" datatype="html">
+        <source>Neve:</source>
+        <target>Neve:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="73de14af99e9958605a7ff046e6488f856cab73a" datatype="html">
+        <source> Beosztása: </source>
+        <target> Beosztása: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eebc18f5052918a147f57a6739f1c3970b58026a" datatype="html">
+        <source>Munkahelye:</source>
+        <target>Munkahelye:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f46ee6a12176f40baf2dc366f2f51ca6db5e525" datatype="html">
+        <source>Szerző(k)</source>
+        <target>Szerző(k)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b958dd34c6549c8827a0a54aa2d8cacc043745f" datatype="html">
+        <source>Szerző adatai</source>
+        <target>Szerző adatai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f703754eb037c9ef70c6fa4e9ae70ae7bdbe8172" datatype="html">
+        <source>Neve: </source>
+        <target>Neve: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="32764382843e7d5f0c050a67d931b0b3a1275f11" datatype="html">
+        <source>Kar: </source>
+        <target>Kar: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fc18c3ab7fd17f7f950481f178753503fb2eb039" datatype="html">
+        <source>Szak: </source>
+        <target>Szak: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5ce102016d68b4748e9f99f06c65baca9a144be3" datatype="html">
+        <source>Aktív félévek száma: </source>
+        <target>Aktív félévek száma: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62b31ebc649dcf38477790d764812fe5a596c78f" datatype="html">
+        <source>Várhatóan ebben a félévben végez: </source>
+        <target>Várhatóan ebben a félévben végez: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c510dee8e1ae99de0796ca6d43d33a57b42b4d31" datatype="html">
+        <source>Neptun kód: </source>
+        <target>Neptun kód: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bbbed52aa9ebd4ccd1f5d8b3a48ce5eae9ae740a" datatype="html">
+        <source>Személyi
+                  igazolvány
+                  szám: </source>
+        <target>Személyi
+                  igazolvány
+                  szám: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4e0cdc230eecb8d542ddd8f8ab000af2ed77827c" datatype="html">
+        <source>Képzés típusa: </source>
+        <target>Képzés típusa: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d45d92acc82a38a7f085e6c08463f351439d7d0e" datatype="html">
+        <source>Adózási
+                  státusza:</source>
+        <target>Adózási
+                  státusza:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="20b85029404480dcfc34677e593a6f990036e923" datatype="html">
+        <source>Dolgozó:</source>
+        <target>Dolgozó:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="22a1da4633d971a20a50e830028d1d188bc6e19f" datatype="html">
+        <source>Adóazonosító jel:</source>
+        <target>Adóazonosító jel:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f1d71a3834e9a8b10632597ed3db97d0b3bd035e" datatype="html">
+        <source>Születési
+                  hely: </source>
+        <target>Születési
+                  hely: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b0a23ed8061188efefb911888940d98cbda4ca6" datatype="html">
+        <source>Születési idő: </source>
+        <target>Születési idő: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c26308f2adda55a40e9f737866862dd643314b3" datatype="html">
+        <source>Anyja neve </source>
+        <target>Anyja neve </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="32e7d1bc90c5327e80e4e7dad6b125c3d748d992" datatype="html">
+        <source>Állandó lakcím / Tartózkodási hely::
+                  Irányítószám: </source>
+        <target>Állandó lakcím / Tartózkodási hely::
+                  Irányítószám: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="28f53ecf28920133dbb73da9c41bf17346b6174c" datatype="html">
+        <source>Város:</source>
+        <target>Város:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5a9286e724ac0d42f66859d9ef186393974bb79e" datatype="html">
+        <source>Utca, házszám:</source>
+        <target>Utca, házszám:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9eefe49ac7afd167ed01f5bad6247ca34bfb4196" datatype="html">
+        <source>Telefon:</source>
+        <target>Telefon:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60e9ef0c07c843773f327abb83919f63d833ad6b" datatype="html">
+        <source>Email: </source>
+        <target>Email: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5a14f86915237e07e741aab004510df66ada1214" datatype="html">
+        <source>Bankszámla
+                  szám:</source>
+        <target>Bankszámla
+                  szám:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="159968d8dc9e378a91848e4559a7b34ef99ee786" datatype="html">
+        <source>Projekt(ek)</source>
+        <target>Projekt(ek)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a09559c1f552058ce8d13a12585bbdeee093155a" datatype="html">
+        <source> Projektek adatai</source>
+        <target> Projektek adatai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-applications-list/user-applications-list.component.html</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa6018e11ae7625a8ab923b4e0e0a4eeb3de5afe" datatype="html">
+        <source>Fotó galériák</source>
+        <target>Fotó galériák</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4600739644e121cdcb811d5673ff69122db27319" datatype="html">
+        <source>TDK konferencia jelentkezések</source>
+        <target>TDK konferencia jelentkezések</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5dca51d109738f764b3bf1ca88c4cdb419a88d36" datatype="html">
+        <source>Jelentkezés TDK konferenciára</source>
+        <target>Jelentkezés TDK konferenciára</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ddc8fc46e3978c0d854b92113576e1e0b29a5548" datatype="html">
+        <source>Jelszó módosítása</source>
+        <target>Jelszó módosítása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="db9a21e40417d9bf03de3dbe6a1f082ab020da7e" datatype="html">
+        <source>Feltöltött TDK dolgozatok, rezümék</source>
+        <target>Feltöltött TDK dolgozatok, rezümék</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="832927bdcf6c1d9bb6a0fa11b25950600ca7ae97" datatype="html">
+        <source>Feltöltött TDK jelentkezések</source>
+        <target>Feltöltött TDK jelentkezések</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="875f109af1c545af1d29ecf8aba1b53af9fee121" datatype="html">
+        <source>TDK jelentkezés feltöltése</source>
+        <target>TDK jelentkezés feltöltése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-upload/user-file-application-upload.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d172bcc70321b4bb926a83206f296586f7efec10" datatype="html">
+        <source>Kijelentkezés</source>
+        <target>Kijelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ad9fef54613d90455c85cc7a7759b17510c2020" datatype="html">
+        <source> Regisztráció</source>
+        <target> Regisztráció</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/base/base.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54d80feea88d5f73f013376aaa30035271d6b133" datatype="html">
+        <source>Dátum</source>
+        <target>Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c957eb6847eb46acfbc07dc1a68341cf9ff0d739" datatype="html">
+        <source> Konferencia</source>
+        <target> Konferencia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/user-file-application-list/user-file-application-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

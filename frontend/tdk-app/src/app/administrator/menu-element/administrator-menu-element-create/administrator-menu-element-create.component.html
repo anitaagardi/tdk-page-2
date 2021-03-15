@@ -1,0 +1,52 @@
+<h2>Új bejegyzés létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #menuElementCreateForm>
+  <mat-form-field>
+    <input name="menuElement.titleName" matInput [(ngModel)]="menuElement.title" placeholder="Cím" type="text" required
+      minlength="1" #menuNameModel="ngModel" />
+    <mat-error *ngIf="menuNameModel.invalid && (menuNameModel.dirty|| menuNameModel.touched)">
+      A menü elem címét kötelező megadni</mat-error>
+
+  </mat-form-field>
+  <br>
+  <label id="visibileValue-radio-group-label">Megjelenítés</label>
+  <br>
+  <mat-radio-group name="menuElement.visibleName" aria-labelledby="visibileValue-radio-group-label"
+    class="visibileValue-radio-group" [(ngModel)]="menuElement.visible">
+    <mat-radio-button class="visibileValue-radio-button" *ngFor="let visibility of visibilities" [value]="visibility">
+      {{visibility}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <br>
+  <br>
+  <br>
+  <mat-label>Menü elem dátuma</mat-label>
+  <input name="menuElement.dateName" matInput [matDatepicker]="pickerDate" [(ngModel)]="menuElement.date"
+    #menuElementDateModel="ngModel">
+  <mat-datepicker-toggle matSuffix [for]="pickerDate"></mat-datepicker-toggle>
+  <mat-datepicker #pickerDate></mat-datepicker>
+  <mat-error *ngIf="menuElementDateModel.invalid && (menuElementDateModel.dirty|| menuElementDateModel.touched)">
+    A
+    menü elem dátumát kötelező megadni</mat-error>
+  <br>
+  <h2>Tartalom</h2>
+  <!--Wysiwyg editor-->
+  <div class="container">
+    <angular-editor name="menuElement.contentName" [(ngModel)]="menuElement.content" [config]="config"></angular-editor>
+  </div>
+  <br>
+  <br>
+  <button mat-raised-button color="primary" (click)="addMenuElement()"
+    [disabled]="menuNameModel.invalid||menuElementDateModel.invalid"><span class="material-icons">
+      add
+    </span>Létrehozás</button>
+  <br>
+  <br>
+  <h3>A létrehozandó menü elem tartalma</h3>
+  <br> <br>
+  <p [innerHTML]="menuElement?.content" style="font-size: 12px;">
+  </p>
+
+
+</form>

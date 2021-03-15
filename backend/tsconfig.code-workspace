@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es5", // <-- here!
+        "module": "commonjs",
+        "sourceMap": true,
+        "types": [
+            "jest"
+          ]
+    }
+}

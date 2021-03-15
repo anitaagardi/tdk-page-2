@@ -1,0 +1,183 @@
+<ng-template [ngIf]="!isFacultyAdminPermission()">
+  <div id="page" class="container">
+    <div id="links">
+      <span id="acknowledgement">
+        <img src="assets/img/ntp_logo_color.jpg" class="logo">
+        <img src="assets/img/emmi_color.png" class="logo">
+        <span style="color:white; font-weight:bold; position:absolute; top: 15px;">Miskolci Egyetem Tudományos Diákköri
+          Tanács
+          "Lépések a tudomány felé"
+          NTP-HHTDK-19-0014</span>
+      </span>
+      <br>
+      <img src="assets/img/cimer.jpg " class="tdkImg">
+
+    </div>
+
+    <div id="header">
+      <div id="menu">
+
+        <ul>
+          <li>
+            <a [href]="HU_URL">Magyar</a>
+          </li>
+          <li>
+            <a [href]="EN_URL">English</a>
+          </li>
+          <li *ngFor="let menu of menus; index as i;">
+            <span (click)="menuList(menus[i])">
+              {{menus[i]?.name}}</span>
+          </li>
+          <li>
+            <a routerLink="/photoGallery" i18n>Fotó galériák</a>
+          </li>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/applyingTDK/list" i18n>TDK konferencia jelentkezések</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/applyingTDK" i18n>Jelentkezés TDK konferenciára</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/changePassword" i18n>Jelszó módosítása</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/file/list" i18n>Feltöltött TDK dolgozatok, rezümék</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/file/upload" i18n>TDK dolgozat, rezümé feltöltése</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/applicationFile/list" i18n>Feltöltött TDK jelentkezések</a>
+            </li>
+          </ng-template>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <a routerLink="/user/applicationFile/upload" i18n>TDK jelentkezés feltöltése</a>
+            </li>
+          </ng-template>
+          <li>
+            <a routerLink="/user/forgottenPassword" i18n>Elfelejtett jelszó</a>
+          </li>
+          <ng-template [ngIf]="isUserPermission()">
+            <li class="userFormat">
+              <span (click)="logout()" i18n>Kijelentkezés</span>
+
+            </li>
+          </ng-template>
+
+          <li><a routerLink="/user/login" i18n>Bejelentkezés</a></li>
+          <li><a routerLink="/user/registration" i18n> Regisztráció</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="main">
+
+
+      <div id="featured">
+
+
+        <router-outlet></router-outlet>
+
+
+      </div>
+      <div id="copyright">
+        <a href="http://www.mfk.uni-miskolc.hu/"><img alt="MFK" src="assets/img/mfk.png" class="facultyImg" width="40"
+            height="40" /></a>
+
+        <a href="http://www.mak.uni-miskolc.hu/"><img alt="MAK"
+            src="http://www.tdk.uni-miskolc.hu/img/tdk_oldal_mak.jpg" src="assets/img/mak.png" class="facultyImg"
+            width="40" height="40" /></a>
+        <a href="http://gepesz.uni-miskolc.hu/"><img alt="GÉIK" src="assets/img/geik.png" class="facultyImg" width="40"
+            height="40" /></a>
+
+        <a href="http://www.jogikar.uni-miskolc.hu/"><img alt="ÁJK" src="assets/img/ajk.png" class="facultyImg"
+            width="40" height="40" /></a>
+
+        <a href="http://gtk.uni-miskolc.hu/"><img alt="GTK" src="assets/img/gtk.png" class="facultyImg" width="40"
+            height="40" /></a>
+
+        <a href="http://bolcsesz.uni-miskolc.hu/"><img alt="BTK" src="assets/img/btk.png" class="facultyImg" width="40"
+            height="40" /></a>
+
+        <a href="http://www.uni-miskolc.hu/~wwweti"><img alt="EK" src="assets/img/ek.png" class="facultyImg" width="40"
+            height="40" /></a>
+
+
+        <span>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a></span>
+        <span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template [ngIf]="isFacultyAdminPermission()">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" id="mat-sidenav-navigation">
+      <mat-nav-list>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/conference/create">TDK konferencia felvitele</a>
+        </ng-template>
+        <a mat-list-item routerLink="/conference/list">TDK konfenciák listázása</a>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/menu/create">Menü készítése</a>
+        </ng-template>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/menu/edit">Menü listázása</a>
+        </ng-template>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/menu/file/list">Fájlok listázása</a>
+        </ng-template>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/menu/file/upload">Fájl feltöltése</a>
+        </ng-template>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/photoGallery/list">Fotó galériák listázása</a>
+        </ng-template>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/photoGallery/create">Fotó galéria létrehozása</a>
+        </ng-template>
+        <a mat-list-item routerLink="/faculty/create">Kar létrehozása</a>
+        <a mat-list-item routerLink="/faculty/list">Karok listázása</a>
+        <a mat-list-item routerLink="/typeOfSpecialization/create">Képzési típus létrehozása</a>
+        <a mat-list-item routerLink="/typeOfSpecialization/list">Képzési típus listázása</a>
+        <a mat-list-item routerLink="/specialization/create">Szak létrehozása</a>
+        <a mat-list-item routerLink="/specialization/list">Szak listázása</a>
+        <a mat-list-item routerLink="/tdkSection/create">TDK szekció létrehozása</a>
+        <a mat-list-item routerLink="/tdkSection/list">TDK szekció listázása</a>
+        <ng-template [ngIf]="isAdminPermission()">
+          <a mat-list-item routerLink="/menu/users">Felhasználók listázása</a>
+        </ng-template>
+
+        <a mat-list-item routerLink="/user/changePassword">Jelszó módosítása</a>
+
+        <a mat-list-item routerLink="/user/forgottenPassword">Elfelejtett jelszó</a>
+        <a mat-list-item>
+          <span mat-list-item (click)="logout()">Kijelentkezés</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content id="router-outlet">
+
+      <p><button mat-button (click)="sidenav.toggle()" id="sideNavToggleButton"><span class="material-icons">
+            menu
+          </span></button></p>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-template>

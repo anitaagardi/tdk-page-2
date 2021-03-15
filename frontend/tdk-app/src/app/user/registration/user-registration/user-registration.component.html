@@ -1,0 +1,67 @@
+<h2 i18n>Regisztráció</h2>
+<mat-divider></mat-divider>
+<br />
+<br />
+<form #registrationForm>
+  <mat-form-field>
+    <input name="nameName" matInput [(ngModel)]="name" placeholder="A felhasználó neve (vezetéknév, keresztnév)"
+      i18n-placeholder type="text" required minlength="1" #nameModel="ngModel" />
+    <mat-error *ngIf="nameModel.invalid && (nameModel.dirty || nameModel.touched)" i18n>A nevet kötelező megadni
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+  <mat-form-field>
+    <input name="email1Name" matInput [(ngModel)]="email1" placeholder="email" i18n-placeholder type="text" required
+      minlength="1" #email1Model="ngModel" />
+    <mat-error *ngIf="email1Model.invalid && (email1Model.dirty || email1Model.touched)" i18n>Az email-t kötelező
+      megadni
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <mat-form-field>
+    <input name="email2Name" matInput [(ngModel)]="email2" placeholder="email mégegyszer" i18n-placeholder type="text"
+      required minlength="1" #email2Model="ngModel" />
+    <mat-error *ngIf="email2Model.invalid && (email2Model.dirty || email2Model.touched)" i18n>Az email-t kötelező
+      megadni
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <mat-form-field>
+    <input name="password1Name" matInput [(ngModel)]="password1" placeholder=" jelszó" i18n-placeholder type="password"
+      required minlength="1" #password1Model="ngModel" />
+    <mat-error *ngIf="
+        password1Model.invalid &&
+        (password1Model.dirty || password1Model.touched)
+      " i18n>A jelszót kötelező megadni</mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <mat-form-field>
+    <input name="password2Name" matInput [(ngModel)]="password2" placeholder="jelszó mégegyszer" i18n-placeholder
+      type="password" required minlength="1" #password2Model="ngModel" />
+    <mat-error *ngIf="
+        password2Model.invalid &&
+        (password2Model.dirty || password2Model.touched)
+      " i18n>A jelszót kötelező megadni</mat-error>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <button mat-raised-button color="primary" (click)="registration()" [disabled]="
+      nameModel.invalid||
+      email1Model.invalid ||
+      email2Model.invalid ||
+      password1Model.invalid ||
+      password2Model.invalid
+    " matTooltip="A sikeres regisztációról emailben is értesítést kap" i18n-matTooltip><span class="material-icons">
+      check_circle
+    </span>
+    <span i18n>Regisztráció</span>
+  </button>
+</form>

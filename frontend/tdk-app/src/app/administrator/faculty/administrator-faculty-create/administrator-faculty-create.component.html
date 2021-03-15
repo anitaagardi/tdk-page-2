@@ -1,0 +1,25 @@
+<h2> Új kar létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #createFacultyForm>
+  <mat-form-field>
+    <input name="faculty.nameName" matInput [(ngModel)]="faculty.name" placeholder="Kar elnevezése" type="text" required
+      minlength="1" #facultyNameModel="ngModel" />
+    <mat-error *ngIf="facultyNameModel.invalid && (facultyNameModel.dirty|| facultyNameModel.touched)">A kar
+      elnevezését
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input name="faculty.name_ENName" matInput [(ngModel)]="faculty.name_EN" placeholder="Kar elnevezése (angol)"
+      type="text" required minlength="1" #facultyName_ENModel="ngModel" />
+    <mat-error *ngIf="facultyName_ENModel.invalid && (facultyName_ENModel.dirty|| facultyName_ENModel.touched)">A kar
+      elnevezését angolul
+      kötelező megadni</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addFaculty()" [disabled]="(facultyNameModel.invalid
+    ||facultyName_ENModel.invalid)"><span class="material-icons">
+      add
+    </span>Mentés</button>
+</form>

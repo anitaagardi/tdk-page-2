@@ -1,0 +1,38 @@
+<h2> Új TDK szekció létrehozása</h2>
+<mat-divider></mat-divider>
+<br>
+<form #createTDKSectionForm>
+  <mat-form-field>
+    <mat-label>Kar neve</mat-label>
+    <mat-select name="selectedFacultyName" [(ngModel)]="selectedFaculty">
+      <mat-option *ngFor="let faculty of faculties" [value]="faculty">
+        {{faculty.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input name="tdkSection.nameName" matInput [(ngModel)]="tdkSection.name" placeholder="TDK szekció elnevezése"
+      type="text" required minlength="1" #tdkSectionNameModel="ngModel" />
+    <mat-error *ngIf="tdkSectionNameModel.invalid && (tdkSectionNameModel.dirty|| tdkSectionNameModel.touched)">
+      A
+      TDK szekció
+      elnevezését
+      kötelező megadni</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input name="tdkSection.name_ENName" matInput [(ngModel)]="tdkSection.name_EN"
+      placeholder="A TDK szekció elnevezése (angol)" type="text" required minlength="1"
+      #tdkSectionName_ENModel="ngModel" />
+    <mat-error
+      *ngIf="tdkSectionName_ENModel.invalid && (tdkSectionName_ENModel.dirty|| tdkSectionName_ENModel.touched)">
+      A TKD szekció
+      elnevezését angolul
+      kötelező megadni</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addTDKSection()" [disabled]="(tdkSectionNameModel.invalid
+    ||tdkSectionName_ENModel.invalid)"><span class="material-icons">
+      add
+    </span>Mentés</button>
+</form>

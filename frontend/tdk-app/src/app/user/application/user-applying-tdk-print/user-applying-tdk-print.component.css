@@ -1,0 +1,66 @@
+button {
+  width: 100%
+}
+
+table {
+  /*margin: 20px;*/
+  width: 100%;
+
+}
+
+#pdfTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 12px;
+  color: black !important;
+
+
+}
+
+.centeredClass {
+  text-align: center;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  /*padding: 2px;*/
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+  background-color: #dfd7d7;
+  color: rgb(14, 13, 13);
+}
+
+.thClass {
+  background-color: #dfd7d7;
+  color: rgb(14, 13, 13);
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  display: block;
+  width: 100%;
+}

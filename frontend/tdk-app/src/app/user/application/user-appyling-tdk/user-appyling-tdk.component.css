@@ -1,0 +1,56 @@
+/*mat-form-field {
+    display: block;
+    width: 50%;
+  }*/
+
+::ng-deep .mat-checkbox-layout {
+  white-space: normal !important;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  margin-top: 3px !important;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;
+}
+
+mat-checkbox {
+  display: block;
+  padding-top: 6px;
+}
+
+mat-radio-button {
+  display: block;
+}
+
+.leftAlign {
+  text-align: left !important;
+}
+
+.example-container {
+  height: 400px;
+  overflow: scroll;
+}
+
+table {
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 15px 15px 15px 15px;
+}
+
+.expansion-button {
+  width: 100%;
+}
