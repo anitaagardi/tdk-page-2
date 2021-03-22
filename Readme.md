@@ -26,7 +26,8 @@ MongoDB
 ## Admin initialization
 get request: `/api/admin`
 
-
+## File upload initialization:
+ mkdir `/backend/tmp`
 
 ### for the hungarian site:
 `ng serve`

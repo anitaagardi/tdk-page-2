@@ -46,14 +46,20 @@
     <br>
     <mat-form-field>
       <input name="conference.dataManagementPolicyName" matInput [(ngModel)]="conference.dataManagementPolicy"
-        placeholder="Adatkezelési szabályzat" type="text" #conferenceDataManagementPolicyModel="ngModel"
-        matTooltip="Nem kötelező adatkezelési szabályzatot konferenciához hozzáadni " />
+        placeholder="Adatkezelési szabályzat" type="text" required #conferenceDataManagementPolicyModel="ngModel" />
+      <mat-error
+        *ngIf="conferenceDataManagementPolicyModel.invalid && (conferenceDataManagementPolicyModel.dirty|| conferenceDataManagementPolicyModel.touched)">
+        A
+        konferencia adatkezelési szabályzatát kötelező megadni</mat-error>
     </mat-form-field>
     <mat-form-field>
       <input name="conference.dataManagementPolicy_ENName" matInput [(ngModel)]="conference.dataManagementPolicy_EN"
-        placeholder="Adatkezelési szabályzat angol nyelven" type="text"
-        #conferenceDataManagementPolicy_ENModel="ngModel"
-        matTooltip="Nem kötelező adatkezelési szabályzatot konferenciához hozzáadni " />
+        placeholder="Adatkezelési szabályzat angol nyelven" type="text" required
+        #conferenceDataManagementPolicy_ENModel="ngModel" />
+      <mat-error
+        *ngIf="conferenceDataManagementPolicy_ENModel.invalid && (conferenceDataManagementPolicy_ENModel.dirty|| conferenceDataManagementPolicy_ENModel.touched)">
+        A
+        konferencia adatkezelési szabályzatát kötelező megadni</mat-error>
     </mat-form-field>
   </form>
   <form #createProjectForm>
@@ -88,10 +94,10 @@
     </table>
   </ng-container>
   <br>
-  <button mat-raised-button color="primary" (click)="addConference()"
-    [disabled]="(conferenceNameModel.invalid
-    ||conferenceBeginDateModel.invalid||conferenceEndDateModel.invalid)||(conference.beginDate>=conference.endDate)||(conference.beginDate>=conference.fileUploadClosingDate)||(conference.endDate>=conference.fileUploadClosingDate)"><span
-      class="material-icons">
+  <button mat-raised-button color="primary" (click)="addConference()" [disabled]="(conferenceNameModel.invalid
+    ||conferenceBeginDateModel.invalid||conferenceEndDateModel.invalid)||(conference.beginDate>=conference.endDate)||(conference.beginDate>=conference.fileUploadClosingDate)||(conference.endDate>=conference.fileUploadClosingDate)
+    ||conferenceDataManagementPolicyModel.invalid||conferenceDataManagementPolicy_ENModel.invalid
+    "><span class="material-icons">
       add
     </span>Létrehozás</button>
 

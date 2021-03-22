@@ -518,6 +518,14 @@ export class UserAppylingTdkComponent implements OnInit {
       }
       return;
     }
+    if (this.author.birthDate > new Date()) {
+      if (this.locale == "en") {
+        alert('Enter valid birthdate');
+      } else {
+        alert('Adjon meg érvényes születési dátumot');
+      }
+      return;
+    }
 
     if (this.isGraduate) {
       if (this.locale == "en") {

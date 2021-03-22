@@ -29,3 +29,8 @@ button {
   display: block;
   width: 100%;
 }
+
+.mat-header-cell {
+  padding: 10px;
+  text-align: center;
+}

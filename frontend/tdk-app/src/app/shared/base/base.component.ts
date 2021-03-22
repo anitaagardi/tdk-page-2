@@ -28,7 +28,9 @@ export class BaseComponent implements OnInit {
   siteLanguage: string = 'English';
   siteLocale: string;
   languageList = [{ code: 'en', label: 'English' }, { code: 'hu', label: 'Magyar' }];
+  isNavOpened = false;
   @ViewChild('drawer', { static: true }) drawer: MatDrawer;
+  @ViewChild('headerNav', { static: false }) headerNav;
   constructor(@Inject(LOCALE_ID) public locale: string, private authenticationService: AuthenticationService, private menuService: MenuService, private router: Router, private activeRoute: ActivatedRoute,) {
     //this.getPreviousPage();
 
@@ -154,6 +156,14 @@ export class BaseComponent implements OnInit {
   }
   changeLang(lang: string) {
 
+  }
+  openNav() {
+    this.isNavOpened = !this.isNavOpened;
+    if (this.isNavOpened) {
+      this.headerNav.nativeElement.style.display = 'block';
+    } else {
+      this.headerNav.nativeElement.style.display = 'none';
+    }
   }
 
 }

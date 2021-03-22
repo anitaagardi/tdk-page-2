@@ -15,6 +15,10 @@
   right: 0;
 }
 
+.openbtn {
+  display: none;
+}
+
 .example-events {
   width: 300px;
   height: 200px;
@@ -39,10 +43,12 @@
 
 #acknowledgement {
   margin-left: 300px !important;
+  font-size: 14px;
 }
 
 #header {
   padding: 0px !important;
+  display: block;
 }
 
 #router-outlet {
@@ -54,6 +60,17 @@
   .container {
     width: 576px;
     overflow: auto;
+  }
+
+  .openbtn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #638CAD;
+  }
+
+  #header {
+    display: none;
   }
 
   #links,
@@ -90,6 +107,17 @@
   .container {
     width: 768px;
     overflow: auto;
+  }
+
+  .openbtn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #638CAD;
+  }
+
+  #header {
+    display: none;
   }
 
   #links,
