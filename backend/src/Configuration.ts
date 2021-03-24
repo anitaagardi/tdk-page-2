@@ -20,8 +20,8 @@ export const EMAIL_DETAILS = {
     host: "smtp.ethereal.email",
     port: 587,
     auth: {
-        user: 'anastasia.mckenzie@ethereal.email',
-        pass: 'NZSF7DHKq28PtNfP4P'
+        user: 'adrian.mante87@ethereal.email',
+        pass: 'wrQm9NXxunM4GavVze'
     }
 }
 export const SENDER_EMAIL = 'anastasia.mckenzie@ethereal.email';
