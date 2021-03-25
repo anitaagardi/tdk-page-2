@@ -29,8 +29,9 @@ MongoDB
 
 `npm install`
 
-## Admin initialization
+## Admin initialization (first user)
 GET request: `/api/admin`
+(anitaagardi@gmail.com, admin)
 
 ## File upload initialization:
  mkdir `/backend/tmp`
